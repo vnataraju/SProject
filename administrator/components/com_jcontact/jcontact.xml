@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>J!Contact</name>
+	<author>Joomlashack LLC</author>
+	<copyright>Copyright 2007 Joomlashack LLC. All rights reserved.</copyright>
+	<creationDate>31/09/2009</creationDate>
+	<license>Commercial</license>
+	<authorUrl>support@joomlashack.com</authorUrl>
+	<version>1.0.15</version>
+	<description>iContact lists integration component.</description>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+			<file driver="mysql">install.nonutf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+			<file driver="mysql">uninstall.sql</file>
+		</sql>
+    </uninstall>
+	<files folder="site">
+	<filename>jcontact.php</filename>
+	<filename>controller.php</filename>
+	<filename>metadata.xml</filename>
+	<filename>index.html</filename>
+	<filename>controllers/index.html</filename>
+	<filename>css/jcontact.css</filename>
+	<filename>css/index.html</filename>
+	<filename>includes/index.html</filename>
+	<filename>includes/domxml-php4-to-php5.php</filename>
+	<filename>includes/jcontact_api.php</filename>
+	<filename>includes/functions.php</filename>
+	<filename>models/register.php</filename>
+	<filename>models/unsubscribe.php</filename>
+	<filename>models/index.html</filename>
+	<filename>views/register/view.html.php</filename>
+	<filename>views/register/metadata.xml</filename>
+	<filename>views/register/index.html</filename>
+	<filename>views/register/tmpl/default.php</filename>
+	<filename>views/register/tmpl/default_message.php</filename>
+	<filename>views/register/tmpl/default.xml</filename>
+	<filename>views/register/tmpl/index.html</filename>
+	<filename>views/unsubscribe/view.html.php</filename>
+	<filename>views/unsubscribe/metadata.xml</filename>
+	<filename>views/unsubscribe/index.html</filename>
+	<filename>views/unsubscribe/tmpl/default.php</filename>
+	<filename>views/unsubscribe/tmpl/default.xml</filename>
+	<filename>views/unsubscribe/tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/site/en-GB.com_jcontact.ini</language>
+	</languages>
+	<installfile>install.jcontact.php</installfile>
+	<administration>
+		<menu>JContact</menu>
+		<submenu>
+		<menu img="" link="option=com_jcontact&amp;controller=jcontact">Main settings</menu>
+		<menu img="" link="option=com_jcontact&amp;controller=admin">JContact Admin</menu>
+		<menu img="" link="option=com_jcontact&amp;controller=email">Confirmation email</menu>
+		</submenu>
+			<files folder="admin">
+				<filename>admin.jcontact.php</filename>
+				<filename>controller.php</filename>
+				<filename>install.jcontact.php</filename>
+				<filename>controllers/admin.php</filename>
+				<filename>controllers/email.php</filename>
+				<filename>controllers/jcontact.php</filename>
+				<filename>controllers/categories.php</filename>
+				<filename>controllers/index.html</filename>
+				<filename>js/jquery.js</filename>
+				<filename>js/nyroModal/img/ajaxLoader.gif</filename>
+				<filename>js/nyroModal/img/close.gif</filename>
+				<filename>js/nyroModal/img/next.gif</filename>
+				<filename>js/nyroModal/img/prev.gif</filename>
+				<filename>js/nyroModal/js/jquery.nyroModal.js</filename>
+				<filename>js/nyroModal/styles/nyroModal.css</filename>
+				<filename>models/jcontact.php</filename>
+				<filename>models/categories.php</filename>
+				<filename>models/email.php</filename>
+				<filename>models/index.html</filename>
+				<filename>views/admin/view.html.php</filename>
+				<filename>views/admin/index.html</filename>
+				<filename>views/admin/tmpl/default.php</filename>
+				<filename>views/admin/tmpl/index.html</filename>
+				<filename>views/email/view.html.php</filename>
+				<filename>views/email/index.html</filename>
+				<filename>views/email/tmpl/default.php</filename>
+				<filename>views/email/tmpl/index.html</filename>
+				<filename>views/categories/view.html.php</filename>
+				<filename>views/categories/index.html</filename>
+				<filename>views/categories/tmpl/default.php</filename>
+				<filename>views/categories/tmpl/index.html</filename>
+				<filename>views/jcontact/view.html.php</filename>
+				<filename>views/jcontact/index.html</filename>
+				<filename>views/jcontact/tmpl/default.php</filename>
+				<filename>views/jcontact/tmpl/index.html</filename>
+				<filename>tables/jcontact.php</filename>
+				<filename>tables/index.html</filename>
+				<filename>install.sql</filename>
+				<filename>install.nonutf8.sql</filename>
+				<filename>uninstall.sql</filename>
+				<filename>index.html</filename>
+			</files>
+			<languages>
+				<language tag="en-GB">languages/admin/en-GB.com_jcontact.ini</language>
+				<language tag="en-GB">languages/admin/en-GB.com_jcontact.menu.ini</language>
+			</languages>
+	</administration>
+</install>

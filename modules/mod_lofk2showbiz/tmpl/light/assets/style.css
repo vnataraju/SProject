@@ -1,0 +1,233 @@
+.lofshowbiz-wrapper ol, .lofshowbiz-wrapper ul { 
+    list-style: none; 
+}
+.lofshowbiz-wrapper a{
+	text-decoration:none;
+}
+.lofshowbiz-wrapper{
+	position:relative;
+	margin:auto;
+	margin-top:50px;	
+}
+/***********************************************
+	-	THEME 1 SETTINGS	-
+************************************************/
+.lofshowbiz-wrapper .light .main-container {
+	background-color:#fff;
+	border:1px solid #e6e6e6;
+	padding:20px;
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(100,100,100,0.1);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(100,100,100,0.1);
+	box-shadow: 0px 0px 5px 1px rgba(100,100,100,0.1);
+}
+.lofshowbiz-wrapper .light {
+	font-family: Arial, sans-serif;
+	font-size:12px;
+	line-height: 20px;
+	color: #777;
+	text-shadow: #fff 1px 1px 1px;
+}
+.lofshowbiz-wrapper .light h2{
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #999;
+	text-shadow: #fff 1px 1px 1px;	
+	margin: 0px;
+	width: 100%;
+}
+.lofshowbiz-wrapper .light h2 a{
+    color:#999999 !important;
+    background: none !important;
+}
+.lofshowbiz-wrapper .light .thumb{
+	border:1px solid #ddd;
+	padding:4px;
+	height:auto;
+	background:#fff;
+	position:relative;
+	z-index:50;
+}
+/**********************************
+	-	THEME-1	MORE	-
+***********************************/
+.lofshowbiz-wrapper .light .page-more{	visibility:hidden;}
+.lofshowbiz-wrapper .light >ul{	visibility:hidden;}
+.lofshowbiz-wrapper .light .big-image{
+	float:left;
+	border:1px solid #ddd;
+	padding:4px;
+	height:auto;
+	background:#fff;
+	position:relative;
+	z-index:50;
+	margin-right:10px;
+}
+.lofshowbiz-wrapper .light .details{
+	position:relative;
+	float:left;
+	width:160px;
+	margin-right:10px;
+}
+.lofshowbiz-wrapper .light .details_double{
+	position:relative;
+	float:left;
+	width:320px;
+	margin-right:15px;
+}
+.lofshowbiz-wrapper .light .video_clip{
+	position:relative;
+	float:left;
+	width: 498px;
+	height: 280px;
+	border:1px solid #ddd;
+	padding:4px;
+	margin-right:10px;
+}
+.lofshowbiz-wrapper .light .check {
+	list-style:none;
+	margin-left:0px;
+	padding-left:0px;
+	
+}
+.lofshowbiz-wrapper .light .check li{
+	background:url(images/check.png) no-repeat left;
+	padding-left:25px;
+	list-style:none;
+	line-height:27px;
+	margin:0px;
+}
+.lofshowbiz-wrapper .light .closer{
+	width:30px;
+	height:30px;
+	position:absolute;
+	background:url(images/button/close.png) no-repeat top;	
+	right:0px;
+	margin-right:-20px;
+	margin-top:-20px;
+	top:0px;	
+	cursor:pointer;
+	z-index:10000;
+}
+.lofshowbiz-wrapper .light .closer:hover{
+	background-position:bottom;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	cursor:pointer;
+}
+/*********************************
+	-	BUTTON LIGHT	-
+**********************************/
+.lofshowbiz-wrapper .buttonlight {
+     margin-top:10px;
+     float: left;
+     height: 30px;
+     line-height: 30px;
+     font-size: 12px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+}
+.lofshowbiz-wrapper .buttonlight:link, .lofshowbiz-wrapper .buttonlight:visited {
+     color: #777;
+     padding: 0 20px 0 20px;
+     text-align: center;
+     text-shadow: 1px 1px 0px #fff;
+     background: #999 url('images/button/btn_light.png') repeat-x center top;
+     border: 1px solid #cdcdcd;
+     text-decoration: none;
+     font-weight: bold;
+}
+.lofshowbiz-wrapper .buttonlight:hover, .lofshowbiz-wrapper .comment-reply-link:hover {
+     color: #fff;
+     text-shadow: 1px 1px 0px #000;
+     background: #333;
+     border: 1px solid #555555;
+     text-decoration: none;
+}
+/**************************	
+	-	TOOLBAR	-
+**************************/
+.lofshowbiz-wrapper .showbiz-toolbar{visibility:hidden}
+.lofshowbiz-wrapper .showbiz-toolbar .left{
+	background:url(images/button/left.png) no-repeat top;
+	width:30px;
+	height:45px;
+	position:absolute;
+	left:0px;
+	top:60px;
+	z-index:100;
+	margin-left:-29px;
+	cursor:pointer;
+}
+.lofshowbiz-wrapper .showbiz-toolbar .left:hover{background-position:bottom;}
+.lofshowbiz-wrapper .showbiz-toolbar .right{
+	background:url(images/button/right.png) no-repeat top;
+	width:30px;
+	height:45px;
+	position:absolute;
+	right:0px;
+	top:60px;
+	z-index:100;	
+	margin-right:-30px;
+	cursor:pointer;
+}
+.lofshowbiz-wrapper .showbiz-toolbar .right:hover{background-position:bottom}
+
+.button-control{
+    display:block !important;
+}
+
+.lofshowbiz-wrapper .module-featured-icon.light{
+    background: url(images/module-featured-icon.png) no-repeat scroll left bottom transparent;
+    height: 80px;
+    position: absolute;
+    left: -2px;
+    top:-2px;
+    width: 80px;
+    z-index: 9999;
+}
+.lofshowbiz-wrapper .module-new-icon.light{
+    background: url(images/module-new-icon.png) no-repeat scroll left bottom transparent;
+    height: 80px;
+    position: absolute;
+    left: -2px;
+    top:-2px;
+    width: 80px;
+    z-index: 9999;
+}
+.lofshowbiz-wrapper .module-hot-icon.light{
+    background: url(images/module-hot-icon.png) no-repeat scroll left bottom transparent;
+    height: 80px;
+    position: absolute;
+    left: -2px;
+    top:-2px;
+    width: 80px;
+    z-index: 9999;
+}
+
+.lofshowbiz-wrapper .light .lof-featured{
+    background: url(images/featured-item-left.png) no-repeat scroll left bottom transparent;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    width: 60px;
+    z-index: 9999;
+}
+.lofshowbiz-wrapper .light .lof-new{
+    background: url(images/new-item-left.png) no-repeat scroll left bottom transparent;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    width: 60px;
+    z-index: 9999;
+}
+.lofshowbiz-wrapper .light .lof-hot{
+    background: url(images/hot-item-left.png) no-repeat scroll left bottom transparent;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    width: 60px;
+    z-index: 9999;
+}

@@ -1,0 +1,322 @@
+/*
+ * MyBlog QuickPost styles
+ * @since 3.2
+ */
+
+
+/* 
+ * Global Variables for color, styles, etc, shared styles too.
+ */
+@text-color: #333;
+@border-color: #d2d6d9;
+@tab-inactive-color: #d2d6d9;
+@tab-inactive-text: #999;
+@tab-active-color: #fff;
+@tab-hover-bg: #eee;
+@tab-active-text: #010101;
+@mb-heading-font: "Arial", "Helvetica", sans-serif;
+@tab-height: 38px;
+@tab-min-width: 60px;
+@base-z-index: 10;
+
+.mb-border-radius (@radius) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.mb-tab-border (@radius) {
+	-moz-border-radius: @radius @radius 0px 0px;
+	-webkit-border-radius: @radius @radius 0px 0px;
+	-o-border-radius: @radius @radius 0px 0px;
+	border-radius: @radius @radius 0px 0px;
+	.mb-border-default;
+	border-bottom: 0px none;
+}
+
+.mb-border-default {
+	border: 1px solid @border-color;
+}
+
+.mb-list-reset {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.mb-font-shadow (@shadow-color) {
+	text-shadow: 1px 1px 0px @shadow-color;
+}
+
+.mb-btn-shadow (@shadow-color) {
+	text-shadow: -1px -1px 0px @shadow-color;
+}
+
+.no-border {
+	border: 0px none;
+}
+
+.no-background {
+	background: transparent;
+}
+
+
+/*
+ * Start the style here
+ */
+
+#myblog-qpContainer {
+	color: @text-color;
+	position: relative;
+	padding: 10px;
+	width: 890px;
+	text-align: left;
+}
+
+#myblog-qpContainer input[type=text],
+#myblog-qpContainer input[type=button],
+#myblog-qpContainer input[type=submit],
+#myblog-qpContainer textarea,
+#myblog-qpContainer .mbqpTextWrap,
+#myblog-fulleditor input[type=text],
+#myblog-fulleditor input[type=button],
+#myblog-fulleditor input[type=submit],
+#myblog-fulleditor textarea,
+#myblog-fulleditor .mbqpTextWrap,
+#myblog-fulleditor select {
+	.mb-border-radius(4px);
+	.mb-border-default;
+	background-color: #fff;
+}
+
+#myblog-qpContainer input[type=text],
+#myblog-fulleditor input[type=text],
+#myblog-fulleditor select {
+	font-size: 14px;
+	padding: 8px;
+	width: auto;
+}
+#myblog-fulleditor select {
+	padding: 4px;
+}
+#myblog-qpContainer .mbqpTextWrap {
+	overflow: hidden;
+	padding: 8px;
+}
+
+#myblog-qpContainer .mbqp-field {
+	margin-bottom: 14px;
+}
+
+#myblog-qpContainer #myblog-qpTabBar {
+	.mb-list-reset;
+	position: relative;
+	z-index: @base-z-index;
+}
+
+#myblog-qpContainer #myblog-qpTabBar li {
+	display: block;
+	float: left;
+	background-color: @tab-inactive-color;
+	.mb-tab-border (6px);
+	height: @tab-height;
+	line-height: @tab-height;
+	font-family: @mb-heading-font;
+	font-weight: bold;
+	font-size: 16px;
+	.mb-font-shadow(rgba(255,255,255,0.6));
+	overflow: hidden;
+}
+
+#myblog-qpContainer #myblog-qpTabBar li + li {
+	margin-left: 4px;
+}
+
+#myblog-qpContainer #myblog-qpTabBar li a {
+	display: block;
+	padding: 0px 12px;
+	text-decoration: none;
+	color: @tab-inactive-text;
+	text-align: center;
+	min-width: @tab-min-width;
+}
+
+#myblog-qpContainer #myblog-qpTabBar li.mbqp-tabCurrent a,
+#myblog-qpContainer #myblog-qpTabBar li a:hover {
+	color: @tab-active-text;
+}
+
+#myblog-qpContainer #myblog-qpTabBar li a:hover {
+	background: @tab-hover-bg;
+}
+
+#myblog-qpContainer #myblog-qpTabBar li.mbqp-tabCurrent,
+#myblog-qpContainer #myblog-qpTabBar li.mbqp-tabCurrent a:hover {
+	background-color: @tab-active-color;
+}
+
+#myblog-qpContainer #myblog-qpTabBar li.mbqp-tabLabel {
+	background: transparent;
+	.no-border;
+	margin-right: 10px;
+}
+
+#myblog-qpContainer #myblog-qpTabBar li.mbqp-tabRight {
+	float: right;
+}
+
+#myblog-qpContainer #mbqp-fields {
+	position: relative;
+	z-index: @base-z-index - 1;
+	margin-top: -1px;
+	padding: 20px;
+	background: @tab-active-color;
+	color: @tab-active-text;
+	.mb-border-radius (4px);
+	.mb-border-default;
+}
+
+#myblog-qpContainer #mbqp-fields label,
+#myblog-qpContainer #mbqp-fields .sectionHeader {
+	display: block;
+	font-family: @mb-heading-font;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	color: @tab-active-text;
+}
+
+#myblog-qpContainer #mbqp-fields label span {
+	color: @tab-inactive-text;
+	font-weight: normal;
+	font-style: italic;
+}
+
+#myblog-qpContainer input.myblog-editor-toggler,
+#myblog-fulleditor input.myblog-editor-toggler {
+	.no-border;
+	.no-background;
+	.mb-list-reset;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: -1px;
+	.mb-font-shadow(rgba(255,255,255,0.6));
+}
+
+#myblog-fulleditor input.myblog-editor-toggler {
+	float: left;
+}
+
+#myblog-qpContainer .mbqp-field {
+	display: none;
+}
+
+#myblog-qpContainer .mbqp-show {
+	display: block;
+}
+
+#myblog-qpContainer .mbqp-upload-wrap {
+	position: relative;
+	float: left;
+	margin-right: 6px;
+}
+
+#myblog-qpContainer .mbqp-upload-wrap input[type=file] {
+	position: absolute;
+	display: block;
+	z-index: @base-z-index - 1;
+	height: 39px;
+	line-height: 39px;
+	font-size: 26px;
+	width: 200px;
+	padding: 0;
+	margin: 0;
+	opacity: ;
+	left: -1px;
+	top: -1px;
+	opacity: 0;
+	cursor: pointer;
+	.no-border;
+}
+
+#myblog-qpContainer #mbpqPlaceHolder {
+	position: relative;
+	z-index: @base-z-index - 2;
+}
+
+#mbqpUploadPhoto {
+	position: relative;
+	z-index: @base-z-index - 1;
+}
+
+#myblog-qpContainer input.mb-button,
+#myblog-fulleditor input.mb-button{
+	display: block;
+	font-size: 18px;
+	line-height: 40px;
+	height: 40px;
+	padding: 0px;
+	font-weight: bold;
+	font-family: @mb-heading-font;
+	color: #fff;
+	letter-spacing: -1px;
+	.mb-btn-shadow (rgba(0,0,0,0.4));
+	background: #727272 url(../images/mb-greybtn-bg.png) repeat-x 0 0;
+	border: 1px solid #727272;
+	cursor: pointer;
+	float: left;
+	min-width: 140px;
+	text-align: center;
+}
+
+#myblog-qpContainer input.mb-button.mb-green,
+#myblog-fulleditor input.mb-button.mb-green {
+	background: #77bb33 url(../images/mb-greenbtn-bg.png) repeat-x 0 0;
+	border-color: #77bb33;
+	.mb-btn-shadow (rgba(0,0,0,0.2));
+}
+
+#myblog-qpContainer input.mb-button:hover,
+#myblog-fulleditor input.mb-button:hover {
+	background-position: 0px -43px;
+}
+
+#myblog-qpContainer input.mb-button.mb-right,
+#myblog-fulleditor input.mb-button.mb-right {
+	float: right;
+	margin-left: 6px;
+}
+
+#myblog-qpContainer input.mb-button.mb-smaller {
+	line-height: 35px;
+	height: 35px;
+	font-size: 16px;
+}
+#myblog-fulleditor input.mb-button.mb-smaller {
+	line-height: 33px;
+	height: 33px;
+	font-size: 16px;
+}
+
+#myblog-qpContainer .mbPostOptions {
+	background: transparent url(../images/icon-gear.png) no-repeat 0 50%;
+	padding-left: 20px;
+	line-height: 20px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	color: @tab-active-text;
+	margin-bottom: 6px;
+	text-decoration: none;
+}
+
+#myblog-qpContainer #mbqp-postOption {
+	.mb-border-default;
+	.mb-border-radius(4px);
+	padding: 15px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	display: none;
+}

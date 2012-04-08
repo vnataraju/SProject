@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="community" method="upgrade">
+	<name>MyBlog</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright 2008 - 2010 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@azrul.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>2.2.4</version>
+	<isapplication>true</isapplication>
+	<description>
+		My Blog Application for JomSocial. Users will be able to display their MyBlog post on their profile page.
+	</description>
+	<languages>
+	    <language tag="en-GB">en-GB.plg_myblog.ini</language>
+	</languages>
+	<files>
+		<file plugin="myblog">myblog.php</file>
+		<folder>myblog</folder>
+	</files>	
+	<menuitem>
+		<menu label="Inbox" position="toolbar">
+			<link label="Inbox">task=inbox</link>
+			<link label="Compose">task=compose</link>
+		</menu>
+	</menuitem>	
+	<params>
+		<param name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appearin the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="position" type="list" default="content" label="Position" description="Default position if you select this as core apps">
+			<option value="content">Main  content</option>
+			<option value="sidebar-top">Sidebar top</option>
+			<option value="sidebar-bottom">Sidebar bottom</option>
+		</param>
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+			<option value="1">Use Global</option>
+			<option value="0">No</option>
+		</param>
+		<param name="limit" type="text" default="50" label="Limit" description="Limit the length of the content (default is 50)." />
+		<param name="count" type="text" default="5" label="Count" description="The number of blog to display (default is 5)" />
+		<param name="order_by" type="list" default="ordering" label="Order By" description="Order the entried by either date or Joomla's content ordering.">
+			<option value="created">Date</option>
+			<option value="ordering">Order</option>
+		</param>		
+		<param name="order" type="list" default="DESC" label="Order" description="Changes the ordering method of My Blog entry">
+			<option value="DESC">Descending</option>
+			<option value="ASC">Ascending</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appearin the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="position" type="list" default="content" label="Position" description="Default position if you select this as core apps">
+					<option value="content">Main  content</option>
+					<option value="sidebar-top">Sidebar top</option>
+					<option value="sidebar-bottom">Sidebar bottom</option>
+				</field>
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+					<option value="1">Use Global</option>
+					<option value="0">No</option>
+				</field>
+				<field name="limit" type="text" default="50" label="Limit" description="Limit the length of the content (default is 50)." />
+				<field name="count" type="text" default="5" label="Count" description="The number of blog to display (default is 5)" />
+				<field name="order_by" type="list" default="ordering" label="Order By" description="Order the entried by either date or Joomla's content ordering.">
+					<option value="created">Date</option>
+					<option value="ordering">Order</option>
+				</field>		
+				<field name="order" type="list" default="DESC" label="Order" description="Changes the ordering method of My Blog entry">
+					<option value="DESC">Descending</option>
+					<option value="ASC">Ascending</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</install>

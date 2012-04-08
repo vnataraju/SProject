@@ -1,0 +1,67 @@
+.leo-userpanel{
+ 	float:right
+}
+.leo-panels-wrapper{ position:relative; }
+.leo-userpanel, .leo-userpanel .leo-button {	position:relative;	z-index:102}
+ .leo-panels-wrapper > div { float:left;  position:relative; }
+.leo-userpanel .leo-button{
+ 	
+    color: #555555;
+    display: block;
+    font-size: 10px;
+    line-height: 27px !important;
+    padding: 0 7px !important;
+	text-decoration:none;
+	
+}
+.leo-userpanel  .leo-panels-wrapper div a:hover{  background:none; text-decoration: none; }
+.leo-userpanel  .leo-panels-wrapper  div.active{ 
+	
+}
+.leo-panels-wrapper .leo-panel{	display:none;	position:absolute;	top:0;	right:0;	 overflow:hidden; z-index:100 ; top:28px;  
+
+	box-shadow:0 2px 4px #999999;
+	-moz-box-shadow: 0 2px 4px #999999;
+	-webkit-box-shadow: 0 2px 4px #999999;
+	
+}
+.leo-panels-wrapper .leo-panel .panel-wrapper{
+	background:#FBFBFB;	border:solid #CCC 1px;
+	padding:20px 12px; 
+	text-align:left;
+	border-bottom-width:medium;min-height:76px;
+}
+#sbox-content .leo-panel{ display:block; position:relative; background:none; border:0}
+.leo-userpanel .leo-button div{	float:left; padding:0 0px;	font-weight:bold;	cursor:hand;	cursor:pointer; position:relative }
+#leo-login-panel{ width:320px; }
+#leo-register-panel{ width:460px; }
+#leo-logout-panel{ width:300px;  }
+
+.panel-wrapper h3{
+    border-bottom: 1px solid #E7E7E7;
+    font-size: 21px;
+    margin: opx;
+	text-align:left;
+	float:18px;
+}
+
+.leo-pnlogin ul { border-top: 1px solid #E7E7E7; margin: 22px 0 10px; padding: 2px 0 0; }
+.leo-pnlogin ul li { float: left; font-size: 11px; background:none; list-style:none; padding-top:0px;  }
+.leo-pnlogin ul li:first-child { margin-right: 10px; }
+.leo-pnlogin ul li a { background:none }
+.leo-pnlogin label{ font-size:12px; }
+.panel-wrapper dl dt:first-child { font-size: 10px; display:block; width:100%; }
+.panel-wrapper dt { float: left; width: 35%; clear: both; }
+.panel-wrapper dt,
+.panel-wrapper dd { line-height: 41px; height: 35px; text-align:left }
+
+.leo-pnregister fieldset { padding: 0 0 24px }
+.leo-pnregister label { padding: 0 0 0 2px; font-size: 12px; }
+.leo-pnregister > div { line-height: 30px;}
+.leo-pnregister > div > button { margin-right: 12px;}
+.leo-pnregister > div a { text-decoration: underline }
+.panel-wrapper input[type="text"],
+.panel-wrapper  input[type="password"] {  display:block; width: 220px; height:20px }
+.panel-wrapper input[type="text"],
+.panel-wrapper input[type="password"],
+.panel-wrapper input[type="email"]{ width: 250px; height:20px }

@@ -1,0 +1,49 @@
+<!-- some header stuff -->
+<div id="myblog">
+<link href="<?php echo MY_COM_LIVE; ?>/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="<?php echo MY_COM_LIVE; ?>/css/ui.css" type="text/css" media="screen" />
+<!--[if lte IE 6]>
+<link href="<?php echo MY_COM_LIVE; ?>/css/style.IE6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+<link href="<?php echo MY_COM_LIVE; ?>/css/style.IE7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--JavaScript-->
+<script type="text/javascript" src="<?php echo MY_COM_LIVE; ?>/js/myblog.js"></script>
+<!-- start tab navigation -->
+	<ul id="myblogTabNav">
+		<li><a href="<?php echo JRoute::_('index.php?option=com_myblog&task=adminhome&Itemid='.myGetAdminItemId());?>"><?php echo JText::_('COM_MY_ADMIN_MY_ENTRIES');?></a></li>
+		<li><a  href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerpref&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_ADMIN_MENU_PREFERENCES');?></a></li>
+		<li><a  href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerstats&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_ADMIN_MENU_STATS');?></a></li>
+                <li><a class="current" href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerintegration&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_INTEGRATION');?></a></li>
+	</ul>
+<!-- end tab navigation -->
+<div>
+<?php if($libraries_available==true):?>
+    <p>
+    <?php if($oauth_access_token):?>
+    <p><?php echo JText::sprintf('COM_MY_TWITTER_VERIFIED',JRoute::_('index.php?option=com_myblog&task=bloggerintegration&action=delete_twitter'))?></p>
+    <?php else:?>
+	<?php if($oauth_access_token==''):?>
+	<a href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerintegration&app=twitter&action=request_token&Itemid='.myGetAdminItemId());?>"><img src="<?php echo MY_COM_LIVE; ?>/images/sign-in-with-twitter.png" /></a>
+	<?php else:?>
+	<?php echo JText::_('COM_MY_TWITTER_AUTH_FAILED') ?>
+	<?php endif;?>
+    <?php endif;?>
+    <br />
+    <?php if($enablePostFacebook):?>
+	<?php if($user_fb):?>
+	<p><?php echo JText::sprintf('COM_MY_FACEBOOK_AUTH_VERIFIED',$fb_logout_url)?></p>
+	<?php else:?>
+	<a href="<?php echo $fb_login_url?>"><img src="<?php echo MY_COM_LIVE; ?>/images/sign-in-with-fb.png" /></a>
+	<?php endif;?>
+
+    <?php endif;?>
+<?php else:?>
+<?php echo JText::_('COM_MY_LIBRARY_UNAVAILABLE') ?>
+<?php endif;?>
+<div></div>
+</p>
+</div>
+
+</div>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/controllers
+END
+jcontact.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/controllers/jcontact.php
+END
+categories.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/controllers/categories.php
+END
+email.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/controllers/email.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/controllers/index.html
+END
+admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/controllers/admin.php
+END

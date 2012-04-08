@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>bootstrap</name>
+	<creationDate>31 January 2012</creationDate>
+	<author>Philip Locke</author>
+	<authorEmail>phil@fastnetwebdesign.co.uk</authorEmail>
+	<authorUrl>http://www.fastnetwebdesign.co.uk</authorUrl>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>1.0.0</version>
+	<description>bootstrap</description>
+
+<files>
+    <folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<folder>javascript</folder>
+		<folder>fonts</folder>
+		<folder>language</folder>
+</files>
+
+<positions>
+<position>ja-login</position>
+<position>navigation</position>
+<position>top-panel</position>
+<position>left</position>
+<position>position-right</position>
+<position>position-left</position>
+<position>login</position>
+<position>module1a</position>
+<position>module1b</position>
+<position>module1c</position>
+<position>module2a</position>
+<position>module2b</position>
+<position>module2c</position>
+<position>footer</position>
+<position>debug</position>
+<position>position-0</position>
+<position>position-1</position>
+<position>position-2</position>
+<position>position-3</position>
+<position>position-4</position>
+<position>position-5</position>
+<position>position-6</position>
+<position>position-7</position>
+<position>position-8</position>
+<position>position-9</position>
+<position>position-10</position>
+<position>position-11</position>
+<position>position-12</position>
+<position>position-13</position>
+<position>position-14</position>
+<position>header</position>
+<position>content</position>
+<position>headertop</position>
+</positions>
+
+</extension>

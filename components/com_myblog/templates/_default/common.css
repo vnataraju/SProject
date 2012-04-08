@@ -1,0 +1,137 @@
+/*
+ * File:		common.css
+ * Version:		3.2
+ * Purpose:		This file contains many common elements that are shared across many themes.
+				You can include this file at the top of your CSS file for any of your custom themes
+				to inherit some of the system styles.
+				
+ * Author:		Slashes & Dots Sdn. Bhd.
+ * URL:			http://www.azrul.com
+ */
+
+
+#myBlog-wrap .entry-body img {
+	max-width: 100%;
+}
+
+#myBlog-wrap .entry-body img[style*=left] {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#myBlog-wrap .entry-body img[style*=right] {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+/* Tags
+ * =================================================================================================
+ */
+
+#mbCatTagWrap {
+	padding:0 10px 30px;
+}
+
+#mbCatTagWrap .mbTags {
+	display: block;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background: #eee;
+	float: left;
+	padding: 6px 10px;
+	text-decoration: none;
+	border: 1px solid #f9f9f9;
+	box-shadow: 0px 1px 2px #dfdfdf;
+	margin-bottom: 8px;
+}
+#mbCatTagWrap .mbTags + .mbTags {
+	margin-left: 8px;
+}
+
+#myBlog-wrap .mbNavi a {
+	text-transform: capitalize;
+}
+
+#myBlog-wrap .mbCommonWrap {
+	margin: 20px 0;
+}
+
+/* Search Box
+ * =================================================================================================
+ */
+
+#myBlog-wrap #myblogSearch {
+	padding: 10px;
+	position: relative;
+	background: #eee;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	box-shadow: 0px 2px 2px #ddd;
+	border: 1px solid #f2f2f2;
+	overflow: hidden;
+}
+
+#myBlog-wrap #myblogSearch ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#myBlog-wrap #myblogSearch ul li {
+	width: 33%;
+	float: left;
+}
+
+#myBlog-wrap .mbCommonPad {
+	padding: 0 5px;
+}
+
+#myBlog-wrap #myblogSearch ul li label {
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #fff;
+	display: block;
+	padding-bottom: 6px;
+}
+
+#myBlog-wrap #myblogSearch ul li input {
+	width: 99%;
+	font-size: 130%;
+	border: 1px solid #ccc;
+	padding: 4px 0;
+	color: #555;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#myBlog-wrap #myblogSearch ul li input:focus {
+	color: #222;
+	border-color: #999;
+}
+
+#myBlog-wrap .searchresults {
+	margin: 20px 0;
+}
+
+#myBlog-wrap #myblogSearchSubmit input[type=submit] {
+	display: block;
+	float: right;
+	margin: 10px 0 0;
+}
+
+#myBlog-wrap .searchresults ul {
+	list-style-type: none;
+	padding: 0;
+	color: #666;
+}
+
+#myBlog-wrap .searchresults ul li {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+
+#myBlog-wrap .searchresults .mbSearchMeta {
+	font-size: 11px;
+}

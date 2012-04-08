@@ -1,0 +1,424 @@
+/*
+ * File:		template_style.css
+ * Version:		3.2
+ * Purpose:		This is MyBlog's 'Default' Template core CSS File
+ * Author:		Slashes & Dots Sdn. Bhd.
+ * URL:			http://www.azrul.com
+ */
+
+@import url(../../_default/common.css);
+
+/* #myBlog-wrap - the main MyBlog wrapper. */
+#myBlog-wrap {
+	position: relative;
+	overflow: hidden;
+	clear: both;
+}
+
+/* #myBlog-head - the header section of the blog, which contains the toolbar */
+#myBlog-wrap #myBlog-head {
+	position: relative;
+	background: #353535 url(../images/header-bg.jpg) no-repeat 50% 0;
+	padding: 0 0 36px 0;
+	min-height: 80px;
+	overflow: hidden;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	color: #fff;
+}
+
+/* Feed Icon on toolbar */
+#myBlog-wrap #myBlog-head .toolbarFeed {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 32px;
+	height: 32px;
+}
+
+#myBlog-wrap #myBlog-head .toolbarFeed a {
+	display: block;
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+	line-height: 32px;
+	background: transparent url(../images/rss-icon.png) no-repeat 0 0;
+	text-indent: -999px;
+}
+
+#myBlog-wrap #myBlog-head .toolbarFeed a:hover {
+	background-position: 0 -32px;
+}
+
+/* #myBlog-toolbar - the main toolbar on top */
+#myBlog-wrap ul#myBlog-toolbar {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	right: 10px;
+	bottom: 0px;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li {
+	float: left;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li + li {
+	margin-left: 2px;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li a {
+	display: block;
+	background: #222;
+	border-bottom: 1px solid #222;
+	color: #fff;
+	font-weight: normal;
+	padding: 2px 10px 0;
+	line-height: 28px;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	text-decoration: none;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li a:hover,
+#myBlog-wrap ul#myBlog-toolbar li#toolbarWrite a:hover {
+	background-color: #444;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li.toolbarAdmin a {
+	background: url("../images/mb-greenbtn-bg.png") repeat-x scroll 50% 0 #77BB33;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+	border-color: #77BB33;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li.toolbarAdmin a:hover {
+	background-position: 0px -43px;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li#toolbarWrite a span,
+#myBlog-wrap ul#myBlog-toolbar li#toolbarWriteQuick a span {
+	background: transparent url(../images/text-add-document.png) no-repeat 0px 50%;
+	text-indent: -9999px;
+	width: 16px;
+	display: block;
+	overflow: hidden;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li#toolbarWriteQuick a span {
+	background: transparent url(../images/quickposticon.png) no-repeat 0px 50%;
+}
+
+#myBlog-wrap ul#myBlog-toolbar li.blogActive a,
+#myBlog-wrap ul#myBlog-toolbar li.toolbarAdmin.blogActive a {
+	border-bottom: 1px solid transparent;
+	background: #fff;
+	font-weight: bold;
+	color: #333;
+	text-shadow: 0px 0px 0px transparent;
+}
+
+
+#myBlog-wrap #myBlog-head h3,
+#myBlog-wrap #myBlog-head .desc {
+	padding: 0px 12px;
+	text-shadow: -1px -1px 0px #6e6e6e;
+	line-height: 1.2;
+	margin: 0;
+	color: #fff;
+	margin-right: 53px;
+}
+
+#myBlog-wrap #myBlog-head h3 {
+	padding: 16px 12px 8px;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+
+/* #myBlog-content : all the posts */
+#myBlog-wrap .postSummary-top {
+	margin-bottom: 20px;
+}
+
+#myBlog-wrap .mbBreadcrumb {
+	padding: 20px 0 0;
+}
+
+#myBlog-wrap .postContent {
+	margin-top: 20px;
+	position: relative;
+}
+
+#myBlog-wrap .postContent img[style*="left"] {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#myBlog-wrap .postContent img[style*="right"] {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+#myBlog-wrap .postContent img[style*="auto"] {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#myBlog-wrap .postContent-text blockquote {
+	display: block;
+	padding: 0 20px;
+	margin: 20px;
+}
+
+#myBlog-wrap .postContent-text img {
+	max-width: 100% !important;
+}
+
+#myBlog-wrap .postSummary {
+	margin-top: 20px;
+}
+
+#myBlog-wrap .postEntry-divider {
+	border: 0px none;
+	height: 1px;
+	background: #ccc;
+	display: block;
+	margin: 20px 0 0;
+}
+
+#myBlog-wrap .postComments {
+	border-top: 1px solid #eee;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+#myBlog-wrap .postComments .mbCommentCount {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+/* Some myblog metabox magic */
+
+#myBlog-wrap .mbMetaWrap {
+	position: relative;
+	min-height: 40px;
+}
+
+#myBlog-wrap .mbMetaIcons {
+	position: absolute;
+	width: 40px;
+	right: 0;
+	top: 0;
+}
+
+#myBlog-wrap .userAvatar {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#myBlog-wrap .postSummary-meta {
+	font-size: .85em;
+	color: #888;
+	line-height: 1.4;
+}
+
+#myBlog-wrap .userAvatar + .postSummary-meta {
+	margin-left: 50px;
+}
+
+#myBlog-wrap .mbMetaIcons + .userAvatar + .postSummary-meta,
+#myBlog-wrap .mbMetaIcons + .postSummary-meta {
+	margin-right: 50px;
+}
+
+#myBlog-wrap .postSummary-footer .postSummary-readmore {
+	text-align: right;
+	width: 49%;
+	float: right;
+}
+
+/* Quickposts */
+#myBlog-wrap .mbqp-photo .mbEntry img,
+#myBlog-wrap .postContent.mbqp-photo .postContent-text img {
+	display: block;
+	margin: 10px 0 10px;
+	max-width: 90% !important;
+	height: auto;
+	border: 10px solid #f2f2f2;
+}
+
+#myBlog-wrap .mbqp-photo .mbEntry p,
+#myBlog-wrap .postContent.mbqp-photo .postContent-text p {
+	margin: 0px auto 20px;
+	width: 90%;
+	text-align: center;
+}
+
+#myBlog-wrap .mbqp-quote blockquote {
+	font: normal 18px/26px 'Georgia', 'Times New Roman', serif;
+	font-style: italic;
+	color: #666;
+	padding: 20px 20px 20px 85px;
+	margin: 20px 0px 0;
+	background: transparent url(../images/blockquote.png) no-repeat  0 0;
+}
+
+#myBlog-wrap .mbqp-quote-author,
+#myBlog-wrap .mbqp-quote-posted {
+	display: block;
+	margin: 10px 20px 20px 0;
+	text-align: right;
+	text-decoration: none;
+	font-weight: bold;
+	float: right;
+}
+
+#myBlog-wrap .mbqp-quote-posted {
+	float: left;
+	font-weight: normal;
+}
+
+/* Pagination */
+#myBlog-wrap .my-pagenav ul,
+.myblogPagination ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 20px auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+#myBlog-wrap .my-pagenav li,
+.myblogPagination li {
+	display: inline-block;
+	margin: 0 2px;
+}
+.myblogPagination li.pagination-prev .pagenav,
+.myblogPagination li.pagination-start .pagenav,
+.myblogPagination li.pagination-end .pagenav,
+.myblogPagination li.pagination-next .pagenav,
+.myblogPagination li .pagenav,
+#myBlog-wrap .my-pagenav li.pagination-prev .pagenav,
+#myBlog-wrap .my-pagenav li.pagination-start .pagenav,
+#myBlog-wrap .my-pagenav li.pagination-end .pagenav,
+#myBlog-wrap .my-pagenav li.pagination-next .pagenav,
+#myBlog-wrap .my-pagenav li .pagenav {
+	display: block;
+	padding: 0 6px;
+	color: #fff;
+	background: #222;
+	text-align: center;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.myblogPagination li a.pagenav:hover,
+#myBlog-wrap .my-pagenav li a.pagenav:hover {
+	font-weight: normal;
+	background: #444;
+}
+
+.myblogPagination li + li {
+	margin-left: 4px !important;
+}
+
+.myblogPagination li span.pagenav,
+#myBlog-wrap .my-pagenav li span.pagenav {
+	background: url("../images/mb-greenbtn-bg.png") repeat-x scroll 50% 0 #77BB33;
+}
+
+#myBlog-wrap .embed,
+#myBlog-wrap object,
+#myBlog-wrap embed {
+	display: block;
+	margin: 0px;
+	border: 10px solid #f2f2f2;
+	width: 90% !important;
+}
+
+#myBlog-wrap ul.mbPostList {
+	list-style-type: none;
+	margin: 20px 0;
+	padding: 0;
+}
+
+#myBlog-wrap ul.mbPostList li + li {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #eee;
+}
+
+	#myBlog-wrap li.mbPosts {
+		position: relative;
+	}
+	
+	#myBlog-wrap li.mbPosts .mbOuterWrap {
+		position: relative;
+	}
+	
+	#myBlog-wrap li.mbPosts .mbAvatar {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+#myBlog-wrap h3.mbTitle {
+	font: bold 22px/30px 'Arial', 'Helvetica', Sans-serif;
+	letter-spacing: -1px;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+#myBlog-wrap h3.mbTitle a {
+	text-decoration: none;
+}
+
+#myBlog-wrap .mbMeta {
+	font-size: 11px;
+	line-height: 16px;
+	margin-bottom: 15px;
+}
+
+#myBlog-wrap .mbEntry img {
+	max-width: 100% !important;
+}
+
+#myBlog-wrap .mbEntrySidebar {
+	width: 60px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#myBlog-wrap .mbEntryWrap {
+	position: relative;
+	margin-top: 20px;
+}
+
+#myBlog-wrap .mbEntryContainer {
+	margin-left: 80px;
+}
+
+#myBlog-wrap .mbAvatar {
+	text-align: center;
+}
+
+#myBlog-wrap .mbSocial {
+	margin: 10px 0;
+	padding: 10px;
+	text-align: center;
+	width: 50px;
+}
+
+#myBlog-wrap .mbEntrySidebar iframe {
+	width: 50px !important;
+}

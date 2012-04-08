@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Shaper Carousel Module</name>
+	<author>JoomShaper.com</author>
+	<creationDate>Apr 2011</creationDate>
+	<copyright>Copyright (C) 2010 - 2012 JoomShaper.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joomshaper.com</authorEmail>
+	<authorUrl>www.joomshaper.com</authorUrl>
+	<version>1.9.0</version>
+	<description>Joomla Carousel Module by JoomShaper.com</description>
+	<files>
+		<filename module="mod_shaper_carousel">mod_shaper_carousel.php</filename>
+		<folder>tmpl/</folder>
+		<folder>elements/</folder>
+		<folder>assets/</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_shaper_carousel/elements">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+				<field name="ctype" type="radio" default="0" label="Carousel source" description="">
+					<option value="0">Joomla</option>
+					<option value="1">Image directory</option>		
+				</field>
+				<field name="path" type="foldertree" directory="/images" filter="" default="" label="Image Directory" description="" />
+				<field name="catid" type="category" extension="com_content" multiple="true" size="10" default="" label="Category" description="Selects Articles from one or more Categories." />	
+				<field name="count" type="text" default="5" label="Count" description="The number of Articles to display (the default is 5)" />
+				<field name="ordering" type="list" default="a.title" label="Ordering" description="Select which field you would like Articles to be ordered by.">
+					<option value="a.ordering">Joomla! Ordering</option>
+					<option value="a.publish_up">Published Dateate</option>
+					<option value="a.hits">Hits</option>
+					<option value="a.title">Title</option>
+					<option value="a.id">Id</option>
+					<option value="a.alias">Alias</option>
+					<option value="a.created">Created Date</option>
+					<option value="modified">Modified Date</option>
+				</field>
+				<field name="ordering_direction" type="list" default="ASC" label="Article Field to Order By" description="Select the direction you would like Articles to be ordered by."> 
+					<option value="DESC">Descending</option>
+					<option value="ASC">Ascending</option>
+				</field>
+				<field name="user_id" type="list" default="0" label="Authors" description="Filter by author">
+					<option value="0">Anyone</option>
+					<option value="by_me">Added or modified by me</option>
+					<option value="not_me">Not added or modified by me</option>
+				</field>
+				<field name="show_featured" type="list" default="" label="Featured Articles" description="Show/Hide Articles designated as Featured">
+					<option value="">Show</option>
+					<option value="0">Hide</option>
+					<option value="1">Only show Featured Articles</option>
+				</field>
+				
+				<field name="width" type="text" default="85" label="Image Width" description="Image width without px" />	
+				<field name="height" type="text" default="60" label="Image Height" description="Image height without px" />	
+
+				<field name="tamount" type="text" default="6" label="Total Amount to be displayed" description="No. of images to be displayed" />	
+				<field name="amount" type="text" default="4" label="Amount to be scrolled" description="Amount of Image to be scrolled" />	
+
+				<field name="cssinfo" type="radio" default="1" label="Display CSS information" description="CSS information">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="community" method="upgrade">
+	<name>MyBlog Toolbar</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright 2008 - 2010 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@azrul.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>2.2.4</version>
+	<isapplication>false</isapplication>
+	<isbrowsable>false</isbrowsable>
+	<description>
+		My Blog Toolbar for JomSocial
+	</description>
+	<languages>
+	    <language tag="en-GB">en-GB.plg_myblogtoolbar.ini</language>
+	</languages>
+	<files>
+		<file plugin="myblogtoolbar">myblogtoolbar.php</file>
+		<folder>myblogtoolbar</folder>
+	</files>
+	<params>
+	</params>
+</install>

@@ -1,0 +1,207 @@
+/**
+ * @package		My Blog
+ * @copyright (C) 2008 by Slashes & Dots Sdn Bhd - All rights reserved!
+ * @license http://www.azrul.com Copyrighted Commercial Software
+ */
+
+ /* --- Layout Structure --- */
+#myBlogWrapper {
+	background: url('../images/linebg.png') repeat-y white left;
+	min-width: 780px;
+	max-width: 100%;
+	font: normal normal normal 13px/18px Arial, sans-serif;
+	display:inline-block;
+	padding-bottom:20px;
+	width:100%;
+}
+
+/* sideBar */
+#sideBar {
+	width:210px;
+	float:left;
+	display:block;
+	border-right:1px solid #f0f0f0;
+}
+
+#myBlogLogo {
+	float:right;
+	width:145px;
+	height:40px;
+	background:url('../images/logo.png') no-repeat;
+	margin:15px 30px 10px 0;
+}
+.version {text-align:center;}
+
+#myBlogNavigation {
+	float:right;
+}
+
+#myBlogNavigation ul {
+	border:1px solid #f0f0f0;
+	background:#f0f0f0;
+	border-right:none;
+}
+
+#myBlogNavigation ul li {
+	width:185px;
+	background:#fff;
+	text-align:left;
+	padding:7px 0px;
+	margin-bottom:1px;
+}
+
+#myBlogNavigation ul li.group {
+	background:url('../images/groupBg.png') repeat-x;
+	border-left:1px solid #ccc;
+	padding:8px 0px 7px;
+	position:relative;
+	font-weight:bold;
+	margin-left:-2px;
+}
+
+#myBlogNavigation ul li.group:hover {
+	background:url('../images/groupBg.png') repeat-x;
+}
+
+#myBlogNavigation ul li.group a:hover {
+	background:none;
+}
+
+#myBlogNavigation ul li span {
+	background:url('../images/groupArrow.png') no-repeat;
+	position:absolute;
+	right:-13px;
+	top:0px;
+	width:18px;
+	height:33px;
+	display:block;
+}
+
+#myBlogNavigation ul li a {
+	margin-left:10px;
+	color:#424242;
+	display:block;
+}
+
+#myBlogNavigation ul li:hover, #myBlogNavigation ul li a:hover {
+	background:#f0f0f0;
+	text-decoration:none;
+}
+
+
+/* mainPanel */
+#mainPanel {
+	padding:15px 15px 15px 235px;
+	display:block;
+}
+
+#viewOption, ul#preferenceTab {
+	border:1px solid #f0f0f0;
+	position:relative;
+	height:28px;
+	margin-bottom:15px;
+	line-height:28px;
+	font-size:13px;
+}
+
+#viewOption ul#navigation , ul#preferenceTab {
+	margin:0;
+	padding:0;
+	display:block;
+	float:left;
+}
+
+ul#preferenceTab {
+	width:100%;
+	margin-bottom:15px;
+}
+
+#viewOption ul#navigation li, ul#preferenceTab li {
+	display:inline;
+	float:left;
+	padding:0;
+	
+}
+
+#viewOption ul#navigation li a, ul#preferenceTab li a  {
+	padding:6px 10px 7px;
+	color:#4a4a4a;
+	border-right:1px solid #f0f0f0;
+}
+
+#viewOption ul#navigation li a:hover, #viewOption ul#navigation li a.active, ul#preferenceTab li a:hover {
+	background:#4a4a4a;
+	color:#fff;
+	text-decoration:none;
+}
+
+/* .adminlist style myBlog version | inherit from default admin template */
+#myBlogWrapper #mainPanel table.adminlist {
+	border-spacing:0;
+	font-size:13px;
+	color:#242424;
+	line-height:18px;
+}
+#myBlogWrapper #mainPanel table.adminlist thead th {
+	border:none;
+	padding:5px 7px;
+	font: normal normal bold 13px/18px Arial, sans-serif;
+	text-align:left;
+}
+
+#myBlogWrapper #mainPanel table.adminlist thead th.title {
+	text-align:left;	
+	font-weight:bold;
+	font: normal normal bold 13px/18px Arial, sans-serif;
+}
+
+#myBlogWrapper #mainPanel table.adminlist tbody tr td {
+	border:none;
+	border-bottom:1px solid #f0f0f0;
+	padding:7px 7px;
+	font: normal normal normal 13px/18px Arial, sans-serif;
+}
+
+#myBlogWrapper #mainPanel table.adminlist tbody tr:last-child {
+	border-bottom:none;
+}
+
+#myBlogWrapper #mainPanel table.adminlist td.imgStatus {
+	text-align:center;
+}
+
+#myBlogWrapper #mainPanel table.adminlist img.icon {
+	width:10px;
+	height:10px;
+	margin-right:3px;
+}
+
+#myBlogWrapper #mainPanel table.adminlist .postTitle {
+	font-size:13px;
+	line-height:18px;
+}
+
+#myBlogWrapper #mainPanel table.adminlist .postBy, #myBlogWrapper #mainPanel table.adminlist .postTag {
+	font-size:12px;
+	color:#858484;
+	font-style:italic;
+	font-weight:lighter;
+}
+
+#myBlogWrapper #mainPanel table.adminlist .postAction a {
+	color:#858484;
+	margin-right:5px;
+	text-decoration:underline;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#myBlogWrapper #mainPanel table.adminlist .postAction a:hover {
+	color:#242424;
+}
+
+/* Re-style BlueStork / Mission Control / Hathor Wrapper */
+#toolbar-box .m {padding:5px 10px !important;}
+div.toolbar-list a {border:none !important;}
+/* --- Accessories --- */
+.loading { font-family:Verdana,Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;color:#000000;background-color:#FFFF99;padding:4px 16px;top:0px;right:0px;} 

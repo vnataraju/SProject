@@ -1,0 +1,326 @@
+/* --- form component fix-style ---*/
+table.mytable td div input {
+	font: normal normal normal 13px/18px Arial, sans-serif;
+}
+
+table.mytable input, table.mytable textarea, table.mytable select {
+	font: normal normal normal 13px/18px Arial, sans-serif;
+}
+
+table.mytable input:focus, table.mytable textarea:focus, table.mytable select:focus {
+	outline:none;
+}
+
+div.cfgdesc{
+color:#858484;
+font-size:12px;
+font-style:italic;
+font-weight:lighter;
+width:500px;
+}
+
+label.cfgdesc{
+color:#424242;
+font-size:13px;
+line-height:18px;
+vertical-align:top;
+font-weight:normal;
+float:right;
+margin-right:20px;
+}
+
+td.leftalign{
+text-align:right;
+vertical-align:top;
+}
+
+input.cfgdesc{
+margin-top:5px;
+vertical-align:top;
+
+}
+
+.titleConfig{
+	padding: 3px;
+}
+
+#mainAdminContent h1{
+	font-family: verdana;
+	text-decoration: underline;
+}
+
+table.mytable{
+	font-size: 13px;
+	line-height: 18px;
+}
+table.mytable th, .mylabel {
+	padding: 4px;
+	height: 30px;
+	vertical-align: middle;
+}
+table.mytable tr {
+	text-indent: 0px;
+}
+
+table.mytable th{
+	text-indent: 0px;
+	font-size:13px;
+	text-align: left;
+	height: 30px;
+	vertical-align: middle;
+	padding:30px 0px 0px;
+	display:block;
+	float:right;
+	margin-right:20px;
+	text-align:right;
+}
+
+table.mytable tr:first-child th {
+	padding-top:0px;
+}
+
+table.mytable td {
+	color: #424242;
+	text-indent: 0px;
+}
+
+table.mytable .row1{
+	background-color: #FFFFFF;
+}
+
+.tinyaction {
+	color: #0C3C62;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #3366CC;
+	cursor:pointer;
+}
+
+div.comment{
+	padding-top: 4px;
+	padding-bottom: 8px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999999;
+}
+
+div.comment-info{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.CommonTextButtonBig, .CommonTextButtonSmall
+{
+	display: -moz-inline-box;
+	margin: 1px;
+	padding: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #999999;
+	border-top-color: #cccccc;
+	border-left-color: #cccccc;
+	background-color: #eeeeee;
+	color: #333333;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+.CommonTextButtonSmall{
+	padding: 2px 3px 3px 2px;
+	font-size: 100%;
+	text-align: center;
+}
+
+input.CommonTextButtonBig {
+	text-align: left;
+	font-size: 150%;
+	font-weight: bold;
+	color: #000000;
+}
+
+input.CommonTextButtonSmall {
+	text-align: left;
+}
+
+a.CommonTextButtonSmall {
+	cursor:pointer;
+}
+
+input.CommonTextButtonSmall:hover, 
+input.CommonTextButtonSmall:active, 
+input.CommonTextButtonSmall:focus,
+input.CommonTextButtonBig:hover, 
+input.CommonTextButtonBig:active, 
+input.CommonTextButtonBig:focus {
+	background-color: #FFFFFF;
+	cursor:text;
+}
+.CommonTextButtonBig:hover, .CommonTextButtonSmall:hover{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #999999;
+	border-top-color: #cccccc;
+	border-left-color: #cccccc;
+	text-decoration: none;
+	color: #333333;
+	background-color: #dddddd;
+	cursor:pointer;
+	cursor: hand; /* for IE 5 and below */
+}
+
+.adminbody {
+	font-size: 13px;
+	line-height:18px;
+}
+
+div.centermain {
+	padding: 0px;
+}
+
+div#sideNav{
+	width:170px;
+}
+
+div.sideNavTitle {
+	text-align: left;
+	vertical-align: middle;
+	background: #f0f0f0;
+	text-indent: 4px;
+	line-height:24px;
+	padding-top:4px;
+	<!--[if IE 6]>
+	padding-top:8px;
+	padding-bottom:8px;
+	<![endif]-->
+    height:24px;            /* This is part of*/
+    voice-family: "\"}\""; /* Tantek hack    */
+    voice-family:inherit;  /* as is following*/
+}
+div.sideNavTitle img {
+	padding-right: 10px;
+}
+div.sideNavContent{
+	padding-right: 4px;
+	padding-left: 4px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+div.sideNavContent p{
+	margin:1em 0 1em 0;
+}
+
+div.sideNavItem{
+	line-height:20px;
+	padding-top:2px;
+	<!--[if IE 6]>
+	padding-top:4px;
+	padding-bottom:4px;
+	<![endif]-->
+    height:20px;            /* This is part of*/
+    voice-family: "\"}\""; /* Tantek hack    */
+    voice-family:inherit;  /* as is following*/
+}
+
+.loading {
+    font-size: 12px;font-weight: bold;color: #000000;background-color: #FFFF99;padding: 4px 16px;
+    position: absolute;	top: 0px; right: 0px;	
+}
+
+#popupWindowHandle{
+	height:18px;
+	background-color:#604A3C;
+}
+
+/* Hack main css */
+div.centermain {
+
+}
+
+.tabs-nav li {
+	background-position:0px 3px;
+	background-repeat:no-repeat;
+	line-height:15px;
+	margin-bottom:2px;
+	margin-top:2px;
+	padding-left:10px;
+	line-height:20px;
+	padding-bottom:4px;
+	padding-top:2px;
+}
+
+ul {
+list-style-type:none;
+margin:0pt;
+padding:0pt;
+}
+
+table.titleTable{
+	margin: 5px;
+}
+
+/* Main admin div */
+div#mainAdminContent h1 {
+color:black;
+font-family:'Cambria',Georgia,'Times New Roman',Times,serif;
+}
+
+/* Error notice for back end */
+.errornotice{
+	color: red;
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+.editlink a, .editlink a:hover, .editslug a, .editslug a:hover{
+	background: url(../../../administrator/components/com_myblog/images/edit_tag.gif) no-repeat;
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 3px 16px;
+}
+
+.saveTag{
+	background: url(../../../administrator/components/com_myblog/images/save_tag.gif) no-repeat;
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 3px 20px;
+}
+
+.cancelSaveTag{
+	background: url(../../../administrator/components/com_myblog/images/close_tag.gif) no-repeat;
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 3px 20px;
+}
+
+.defaultTag {
+	background: url(../../../administrator/components/com_myblog/images/selected.gif) no-repeat;
+	display: block;
+	height: 16px;
+	width: 16px;
+	margin:3px 3px 2px 0px;
+	outline-style:none;
+	text-indent:-9999px;
+}
+
+.notDefaultTag {
+	background: url(../../../administrator/components/com_myblog/images/unselected.gif) no-repeat;
+	display: block;
+	height: 16px;
+	width: 16px;
+	margin:3px 3px 2px 0px;
+	outline-style:none;
+	text-indent:-9999px;
+}
+
+/**
+* Joomla >= 1.6 alter default styling 
+*/
+div.m{
+	background-color:white;
+}
+
+div#toolbar-box div.m{
+	background:none;
+}
+
+
+textarea{
+	font-size:0.95em;
+}

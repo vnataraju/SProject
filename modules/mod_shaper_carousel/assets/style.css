@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------------
+# Joomla Carousel Module by JoomShaper.com
+# ------------------------------------------------------------------------
+# author    JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2012 JoomShaper.com. All Rights Reserved.
+# @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Websites: http://www.joomshaper.com
+-------------------------------------------------------------------------*/
+#shaper_carousel{float:left;position:relative;padding:0 30px}
+#carousel_inner{float:left;overflow:hidden;position:relative;margin:0;padding:0}
+#carousel_content ul{list-style:none;margin:0;padding:0}
+#carousel_content{position:absolute;width:5600px;margin:0;padding:0}
+#carousel_content li.carousel_item{border:0;list-style:none;background:none;display:inline;margin:0;padding:0}
+#carousel_content li.carousel_item a{float:left;border:5px solid #f5f5f5;background:none;display:block;margin:5px;padding:0}
+#carousel_content li.carousel_item img{display:block;padding:0;margin:0;background:none;}
+#carousel_previous,#carousel_next{width:20px;position:absolute;display:block;cursor:pointer}
+#carousel_previous{left:0;background:url(prev.png) no-repeat 50% 50%}
+#carousel_next{right:0;background:url(next.png) no-repeat 50% 50%}

@@ -1,0 +1,135 @@
+/**
+ # mod_otnews - OT News Module for Joomla! 1.7
+ # author       OmegaTheme.com
+ # copyright    Copyright(C) 2011 - OmegaTheme.com. All Rights Reserved.
+ # @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ # Website:     http://omegatheme.com
+ # Technical support: Forum - http://omegatheme.com/forum/
+**/
+/**------------------------------------------------------------------------
+ * file: layout.css 1.7.0 00001, March 2011 12:00:00Z OmegaTheme $
+ * package: OT News Module
+ *------------------------------------------------------------------------*/
+img {
+    border: none;
+}
+.
+.ot_news,
+.ot_news_i {
+    width: 100%;
+    float: left;
+}
+.ot_news_i {
+    overflow: hidden;
+}
+.blog-news {
+    float: left;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+.blog-news-i {
+    overflow: hidden;
+}
+.ot_news .blog-news li {
+
+    width: 98%;
+    float: left;
+    font-size: 14px;
+   	background: url("../images/arrow-black.jpg") no-repeat top  left transparent;
+    color: #555555;
+    display: block;
+	margin:0px;
+	margin-left:-10px;  
+    padding: 0px 0 6px 15px;
+    text-decoration: none; line-height: 18px; 
+	
+	
+	
+	
+}
+h1.cat_title {
+  	background: url("../images/title-background.png") repeat-x scroll left center transparent;
+    color: #CCCCCC;
+    display: block;
+    font-size: 130%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 2px 2px 0;
+
+	
+	
+}
+h1.cat_title a {
+    color: #1F1F1F; font-size: 14px; font-style:italic; background-color: #FFFFFF; padding-right:5px;
+}
+.col-1-1 {}
+.col-1-1 li a {
+    font-size: 14px;
+}
+div.col-2-1,
+div.col-3-1,
+div.col-3-2 {
+    float: left;
+}
+div.col-2-1 .blog-news-i,
+div.col-3-1 .blog-news-i {
+    padding-right: 10px;
+}
+div.col-3-2 .blog-news-i {
+    padding-left: 10px;
+}
+div.col-2-2,
+div.col-3-3 {
+    float: right;
+}
+div.col-2-2 .blog-news-i,
+div.col-3-3 .blog-news-i {
+    padding-left: 10px;
+}
+div.ot_head_title {
+    width: 100%;
+    float: left;
+    padding-bottom: 15px;
+	height:30px; font-weight:i
+}
+.otnews_thumbs {
+    float: left;
+    padding: 2px;
+    border: 1px #e7e7e7 solid;
+    margin-right: 12px;
+    overflow: hidden;
+}
+.otnews_thumbs_i {
+    overflow: hidden;
+}
+.ot_head_title a.head_title {
+    font-weight: bold;
+    font-size: 14px; color:#1e4378;
+}
+p.createddate {
+    padding: 2px 0;
+    margin: 0;
+}
+span.ot_date {
+    color: #999;
+    font-size: 12px;
+}
+.otnews_readmore {
+    margin-top: 10px;
+    text-align: right; border-bottom: #e9e8e8 solid 1px; margin-bottom: 10px;
+}
+
+a.ot-news {
+	float: right;
+	color: #999 !important;
+	font-size: 11px !important;
+    text-decoration: none;
+    padding: 0 !important;
+    outline: none;
+}
+div.ot-news a:hover,
+div.ot-news a:active,
+div.ot-news a:focus {
+	text-decoration: underline;
+	background: none !important;
+}

@@ -1,0 +1,24 @@
+<?php
+$e = $entry;
+?>
+
+<h2><a href="<?php echo $e['permalink']; ?>"><?php echo $e['title']; ?></a></h2>
+<br />
+<?php echo JText::_('COM_MY_POSTED_BY'); ?>: <a href="<?php echo $e['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $e['author']; ?></a>
+<?php
+if( $categoryDisplay )
+{
+?>
+<?php echo JText::sprintf('COM_MY_POSTED_IN' , $e['jcategory'] ); ?>
+<?php
+}
+?>
+<br />
+<?php echo JText::sprintf('COM_MY_POSTED_ON', $e['createdFormatted']); ?>
+<br /><?php echo JText::sprintf('COM_MY_TAGGED_IN' , $e['categories'] ); ?>
+
+<p>
+    <?php echo $e['text']; ?>
+</p>
+
+

@@ -1,0 +1,137 @@
+<!-- start MyBlog wrapper -->
+<div id="myblog">
+   <!-- start tab navigation -->
+		<ul id="myblogTabNav">
+			<li><a class="current" href="<?php echo JRoute::_('index.php?option=com_myblog&task=adminhome&Itemid='.myGetAdminItemId());?>"><?php echo JText::_('COM_MY_ADMIN_MY_ENTRIES');?></a></li>
+			<li><a href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerpref&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_ADMIN_MENU_PREFERENCES');?></a></li>
+			<li><a href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerstats&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_ADMIN_MENU_STATS');?></a></li>
+                        <li><a href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerintegration&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_INTEGRATION');?></a></li>
+                </ul>
+
+        <?php
+        global $_MY_CONFIG;
+        if($_MY_CONFIG->get('useComment') == '1' || $_MY_CONFIG->get('useComment') == 'jomcomment')
+        {
+        ?>
+        <span><a href="<?php echo JRoute::_('index.php?option=com_myblog&task=showcomments&Itemid='.myGetAdminItemId());?>"><?php echo JText::_('COM_MY_ADMIN_COMMENTS');?></a></span>
+        <?php
+        }
+        ?>
+        <?php
+        if($postingRights)
+        {
+                $link	= rtrim( JURI::root() , '/' ) . '/index.php?option=com_myblog&tmpl=component&task=write&no_html=1&id=0';
+        }
+        ?>
+
+	<!-- end tab navigation -->
+	<div id="savestatus" style="background: #006699 none repeat scroll 0 0;color: #FFF; font-weight:700;padding: 5px;display: none;" ></div>
+	<!-- start show all entries -->
+	<div id="myblogEntryList">
+	<ul id="blog-entries">
+	<?php
+		if( $myentries )
+		{
+		    $count = 0;
+			foreach( $myentries as $row )
+			{
+				if($publishRights)
+				{
+				    // User allowed to publish or unpublish.
+					// publish/unpublished icon
+					$onClick = "\"jax.call('myblog', 'myxTogglePublish', {$row->id});\"";
+					if ($row->state == 1)
+						$published = "<a href=\"javascript:void(0);\" onclick=$onClick><img id=\"pubImg{$row->id}\" src=\"". MY_COM_LIVE ."/images/published.png\" border=\"0\" alt='published'/></a>";
+					else
+						$published = "<a href=\"javascript:void(0);\" onclick=$onClick><img id=\"pubImg{$row->id}\" src=\"". MY_COM_LIVE ."/images/unpublished.png\" border=\"0\" alt='unpublished'/></a>";
+				}
+				else
+				{
+				    // User not allowed to publish or unpublish.
+					if ($row->state == 1)
+						$published = "<img src=\"". MY_COM_LIVE ."/images/published.png\" border=\"0\" alt='published'/>";
+					else
+						$published = "<img src=\"". MY_COM_LIVE ."/images/unpublished.png\" border=\"0\" alt='unpublished'/>";
+		
+				}
+				// Format the date
+				// PHP strftime format
+				$mainframe	=& JFactory::getApplication();
+				$date		= new JDate( $row->created );
+				
+				$date->setOffset( $mainframe->getCfg('offset') );
+				//$row->created	= $date->toFormat( '%Y-%m-%d');
+				$row->created	= $date->toFormat( '%B<br/><strong>%d / %Y</strong>');
+		?>
+
+		<li class="sectiontableentry<?php echo $count % 2 == 0 ? 2 : 1; ?>">
+				<div class="myblogEntryStatus">
+				<div class="myblogDateCreated">
+					<?php echo $row->created;?>
+				</div>
+				<div class="myblogPublish">
+					<?php echo $published;?>
+				</div>
+				</div>
+			<div class="myblogTitle">
+				<ul>
+					<li>		
+						<?php
+						if( $row->state == 1 )
+						{
+						?>
+						<a href="<?php echo myGetPermalinkURL( $row->id );?>"><?php echo $row->title;?></a>
+						<?php
+						}
+						else
+						{
+						?>
+						<a href="<?php echo myGetPermalinkURL( $row->id );?>"><?php echo $row->title; ?></a>
+						<?php
+						}
+						?>
+					</li>
+					<li>
+						<div class="myblogMeta">
+						<span class="number"><?php echo JText::sprintf('COM_MY_BLOG_ADMIN_HITS' , $row->hits ); ?></span> hits&nbsp;&nbsp;
+						<!-- <?php echo JText::sprintf('COM_MY_BLOG_ADMIN_ENTRY_CATEGORY' , $row->catname ); ?>&nbsp;&nbsp; -->
+						<span class="number"><?php echo JText::sprintf('COM_MY_BLOG_ADMIN_ENTRY_TAGS' , $row->numtag ); ?></span>&nbsp;tags
+						
+						<?php
+						if( isset($row->commentCount) )
+						{
+						?> 
+						| <?php echo JText::sprintf('COM_MY_BLOG_ADMIN_COMMENTS' , $row->commentCount );?>
+						<?php
+						}
+						?>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="myblogListAction">	
+				<a class="btnEdit" href="javascript:void(0);" onclick="myAzrulShowWindow('<?php echo rtrim( JURI::root() , '/' ) . '/index.php?option=com_myblog&tmpl=component&task=write&no_html=1&id=' . $row->id;?>');"><?php echo JText::_('COM_MY_EDIT_BLOG');?></a>
+
+				<a class="btnDelete" href="<?php echo JRoute::_('index.php?option=com_myblog&task=delete&id=' . $row->id);?>" onclick="if(!confirm( '<?php echo JText::_('COM_MY_BLOG_ADMIN_CONFIRM_DELETE');?>' ) ) return false;"><?php echo 'X';?></a>
+			</div>
+		</li>
+		<?php
+		        $count++;
+			}
+		}
+		else
+		{
+		?>
+		<li>
+			<div align="center" colspan="5"><?php echo JText::_('COM_MY_BLOG_ADMIN_NO_ENTRIES');?></div>
+		</li>
+		<?php
+		}
+		?>
+
+		</ul>
+	</div>
+	<!-- end show all entries -->
+	<div class="myblogPagination"><?php echo $pagination; ?></div>
+</div>
+<!-- end MyBlog wrapper -->

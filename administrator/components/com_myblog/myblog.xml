@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>My Blog</name>
+	<creationDate>2011-10-18</creationDate>
+	<author>AzrulStudio</author>
+	<authorEmail>support@azrul.com</authorEmail>
+	<authorUrl>http://www.azrul.com</authorUrl>
+	<copyright>Copyright 2008 - 2011 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+	<license>License Info</license>
+	<version>3.2</version>
+	<description>Multi-user blog system for Joomla</description>
+	<installfile>install.myblog.php</installfile>
+	<uninstallfile>uninstall.myblog.php</uninstallfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<files>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>libraries</folder>
+		<folder>model</folder>
+		<folder>modules</folder>
+		<folder>table</folder>
+		<folder>task</folder>
+		<folder>views</folder>
+		<folder>templates</folder>
+		<filename>azvideobot.zip</filename>
+		<filename>azrul.zip</filename>
+		<filename>defines.myblog.php</filename>
+		<filename>functions.myblog.php</filename>
+		<filename>index.html</filename>
+		<filename>jax.myblog.php</filename>
+		<filename>jomsocial_rule.xml</filename>
+		<filename>myblog.php</filename>
+		<filename>router.php</filename>
+		<filename>sef_ext.php</filename>
+	</files>
+	<administration>
+		<menu view="myblog" img="../administrator/components/com_myblog/assets/images/myblog-icon.png">COM_MYBLOG</menu>	
+		<files folder="admin">
+			<folder>assets</folder>
+			<folder>templates</folder>
+			<filename>admin.myblog.html.php</filename>
+			<filename>admin.myblog.php</filename>
+			<filename>ajax.myblog.php</filename>
+			<filename>config.myblog.php</filename>
+			<filename>functions.admin.php</filename>
+			<filename>logo.png</filename>
+			<filename>toolbar.myblog.php</filename>
+			<filename>install.mysql.utf8.sql</filename>
+		</files>
+		<languages>
+			<language tag="en-GB">languages/site/en-GB.com_myblog.sys.ini</language>
+			<language tag="en-GB">languages/site/en-GB.com_myblog.menu.ini</language>
+			<language tag="en-GB">languages/site/en-GB.com_myblog.ini</language>
+		</languages>
+	</administration>
+	<languages>
+		<language tag="en-GB">languages/site/en-GB.com_myblog.ini</language>
+	</languages>
+</install>

@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------------
+# mod_featcats - Featured Categories
+# ------------------------------------------------------------------------
+# author    Joomla!Vargas
+# copyright Copyright (C) 2010 joomla.vargas.co.cr. All Rights Reserved.
+# @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Websites: http://joomla.vargas.co.cr
+# Technical Support:  Forum - http://joomla.vargas.co.cr/forum
+-------------------------------------------------------------------------*/
+ul.featcats, ul.featcats_leading {
+	margin: 0!important;
+	padding: 0!important;
+	list-style: none!important;
+	list-style-type: none!important;
+}
+li.featcat {
+	float: left;
+	padding: 0 10px!important;
+	background: none!important;
+}
+.featcats_leading li {
+	border-top: 1px solid #DDDDDD;
+	padding-top: 10px 0 0!important;
+	background: none!important;
+}
+.featcats_leading li:first-child {
+	padding-top: 0;
+	border: none;
+}
+li.featcat_clr {
+	clear: both;
+}
+ul.featcats img {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin-right: 10px;
+}

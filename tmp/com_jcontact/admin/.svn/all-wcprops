@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/extensions/!svn/ver/175/com_jcontact/trunk/admin
+END
+uninstall.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/uninstall.sql
+END
+install.jcontact.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/install.jcontact.php
+END
+controller.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/controller.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/index.html
+END
+install.nonutf8.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/install.nonutf8.sql
+END
+install.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/install.sql
+END
+admin.jcontact.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/extensions/!svn/ver/80/com_jcontact/trunk/admin/admin.jcontact.php
+END

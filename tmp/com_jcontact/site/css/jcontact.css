@@ -1,0 +1,98 @@
+#jcontact {
+margin:10px 0;
+}
+
+address {
+font-style:normal;
+margin:10px 0;
+}
+#contact-name {
+	font-size: 125%;
+	font-weight: bold;
+}
+#contact-position {
+	font-size: 115%;
+	font-style: italic;
+}
+#contact-image {
+		
+}
+.aright {
+	float: right;
+	margin-right: 25%;
+}
+.aleft {
+	float: left;
+	padding: 5px 25px 25px 0;
+}
+#jcontact #contact-address p {
+	margin-left: 5px;
+}
+#jcontact p {
+line-height:1em;
+margin: 3px 0 3px 0;
+padding: 0;
+}
+#emailForm {
+	margin-top: 15px;
+}
+.contact-other {
+	margin-bottom: 3px;
+}
+.jcontact label {
+	font-weight:bold;
+}
+
+span.marker {
+margin:0 10px 0 0;
+}
+
+div.marker {
+	float:left;
+	padding-top: 1px;
+}
+.wtext {
+	width:85px;
+}
+.wicon {
+	width: 25px;
+}
+.contact_email_checkbox label {
+float:none !important;
+}
+
+.jcontact label.copy {
+width:90%;
+padding:0 0 0 10px;
+}
+
+.jcontact input {
+background:#fff;
+color:#000;
+padding:2px 2px 0;
+margin:2px 0 0;
+}
+
+.jcontact .button {
+border:0;
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+}
+
+label.textarea {
+margin:7px 0;
+display:block;
+}
+
+#jcontact-error {
+	border: 1px solid #ff0000;
+	margin-top: 12px;
+	width: 300px;
+	padding: 3px;
+	text-align: center;
+	font-weight: bold;
+}
+#captcha-img {
+	margin-top: 6px;
+}

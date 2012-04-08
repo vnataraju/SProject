@@ -1,0 +1,89 @@
+<?php
+if ($entry and count($entry) != 0)
+{
+	foreach ($entry as $e)
+	{
+?>
+	<div class="entryContent">
+		<div class="entry">
+			
+			<?php
+				if ($e['avatar'] != "")
+				{
+			?>
+			<div class="userAvatar">
+				<?php echo $e['avatar']; ?>
+			</div>
+			<?php
+				}
+			?>
+			
+			<div class="entryMetaRight">
+				<span class="post-date"><?php echo $e['createdFormatted']; ?></span>
+				<br />
+				<?php
+					if (isset($e['comments']) && $e['comments']!="") // if comments enabled
+					{
+						?>
+							<?php echo '<a href="'.$e['permalink'].'#comments">'.$e['comments'] .'</a>'; ?>
+						<?php
+					}
+				?>
+			</div>
+			
+			<div class="entryHeader">
+				<h2><a href="<?php echo $e['permalink']; ?>"><?php echo $e['title']; ?></a></h2>
+				<div class="entryMeta">
+					<?php echo JText::sprintf('COM_MY_TAGGED_IN' , $e['categories'] ); ?>
+					<br />
+					<?php echo JText::_('COM_MY_POSTED_BY'); ?>: <a href="<?php echo $e['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $e['author']; ?></a>
+					<?php
+						if( $categoryDisplay )
+						{
+					?>
+					<?php echo JText::sprintf('COM_MY_POSTED_IN' , $e['jcategory'] ); ?>
+					<?php
+						}
+					?>
+				</div>
+			</div>
+			
+				<?php
+				if (isset($e['beforeContent']))
+				{ ?>
+					<div class="onBeforePrepareContent">
+					<?php echo $e['beforeContent'];?>
+					</div>
+				<?php
+				}
+				?>
+        
+				<div class="entry-body"> 
+					<article>
+					<?php echo $e['text']; ?> 
+					</article>
+					<div class="clear"></div>
+				</div>
+				
+				<?php if (isset($e['afterContent']))
+				{ ?>
+					<div class="onAfterPrepareContent">
+						<?php echo $e['afterContent'];?>
+					</div>
+				<?php
+				}
+				?>
+		
+				<div class="entry-footer">
+				<?php if ($e['readmore']=="1")
+				{ ?>
+					<a href="<?php echo $e['permalink']; ?><?php echo $showAnchor; ?>"><?php echo JText::_('COM_MY_READMORE');?></a>
+				<?php
+				} ?>
+				</div>
+			</div>
+		</div>
+<?php
+		}
+	}
+?>

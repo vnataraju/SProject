@@ -1,0 +1,280 @@
+/*
+# ------------------------------------------------------------------------
+# JA Kyanite II - Version 1.1 - Licence Owner JA49652
+# ------------------------------------------------------------------------
+# Copyright (C) 2004-2009 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+# @license - Copyrighted Commercial Software
+# Author: J.O.O.M Solutions Co., Ltd
+# Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+# This file may not be redistributed in whole or significant part.
+# ------------------------------------------------------------------------
+*/ 
+
+.ja-megamenu { margin: 0; padding: 0; }
+.ja-megamenu a.over, .ja-megamenu a.active { color: #ffffff !important; }
+
+ul.megamenu { margin: 10px; /* menu's gutter */ } 
+
+/* lv - 0
+-----------------------------------*/
+/* Styling ---*/
+ul.level0 {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+ul.level0 li.mega {
+	background: url(../../images/mainnav-sep.gif) no-repeat right top;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 48px;
+}
+
+ul.level0 li.mega a.mega {
+	color: #333;
+	display: block;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 15px;
+	height: 48px;
+	text-decoration: none;
+}
+
+* html ul.level0 li.mega a.mega { height: auto; margin-bottom: 8px; }
+
+ul.level0 li span.menu-title {
+}
+
+ul.level0 li.over, ul.level0 li.haschild-over,
+ul.level0 li.over.first, ul.level0 li.haschild-over.first {
+	background: url(../../images/mainnav-bg.gif) no-repeat -50px -48px;
+	color: #fff;
+}
+
+ul.level0 li.over.first, ul.level0 li.haschild-over.first {
+	background-position: 0 -48px;
+}
+
+ul.level0 li.haschild a.mega span.menu-title,
+ul.level0 li.haschild-over a.mega span.menu-title {}
+
+ul.level0 li.haschild a.mega span.menu-desc,
+ul.level0 li.haschild-over a.mega span.menu-desc {}
+
+ul.level0 li.active, ul.level0 li.active.first {
+	background: url(../../images/mainnav-bg.gif) no-repeat -450px -48px;
+	color: #fff;
+}
+
+ul.level0 li.active.first { background-position: -403px -48px; }
+
+ul.level0 li.over span.menu-title,
+ul.level0 li.haschild-over span.menu-title,
+ul.level0 li.active span.menu-title {
+}
+
+/* lv - 1 and below
+-----------------------------------*/
+/* Layout ---*/
+.ja-megamenu li.mega .childcontent { display: block; height: auto; position: absolute; }
+
+.ja-megamenu li.mega .childcontent,
+.ja-megamenu li.haschild-over li.mega .childcontent,
+.ja-megamenu li.mega li.haschild-over li.mega .childcontent ,
+.ja-megamenu li.mega li.mega li.haschild-over li.mega .childcontent, 
+.ja-megamenu li.mega li.mega li.mega li.haschild-over li.mega .childcontent, 
+.ja-megamenu li.mega li.mega li.mega li.mega li.haschild-over li.mega .childcontent { left: -999em; /*hide the menu*/ }
+
+.ja-megamenu li.haschild-over .childcontent,
+.ja-megamenu li.mega li.haschild-over .childcontent,
+.ja-megamenu li.mega li.mega li.haschild-over .childcontent,
+.ja-megamenu li.mega li.mega li.mega li.haschild-over .childcontent,
+.ja-megamenu li.mega li.mega li.mega li.mega li.haschild-over .childcontent,
+.ja-megamenu li.mega li.mega li.mega li.mega li.mega li.haschild-over .childcontent { left: auto; /*show on parent:hover*/ }
+
+.ja-megamenu li.mega .right,
+.ja-megamenu li.haschild-over li.mega .right,
+.ja-megamenu li.mega li.haschild-over li.mega .right ,
+.ja-megamenu li.mega li.mega li.haschild-over li.mega .right, 
+.ja-megamenu li.mega li.mega li.mega li.haschild-over li.mega .right, 
+.ja-megamenu li.mega li.mega li.mega li.mega li.haschild-over li.mega .right { right: auto; /*hide the menu*/ }
+
+.ja-megamenu li.haschild-over .right
+{ right: 0; /*show on parent:hover*/ }
+.ja-megamenu li.mega li.haschild-over .right,
+.ja-megamenu li.mega li.mega li.haschild-over .right,
+.ja-megamenu li.mega li.mega li.mega li.haschild-over .right,
+.ja-megamenu li.mega li.mega li.mega li.mega li.haschild-over .right,
+.ja-megamenu li.mega li.mega li.mega li.mega li.mega li.haschild-over .right 
+{ right: 12em; /*show on parent:hover*/ }
+
+ul.level1 li.mega { float: none; }
+
+ul.level0 .childcontent { margin-top: -3px; margin-left: -4px; }
+ul.level1 .childcontent { margin: -2em 0 0 160px; }
+
+ /* Columns ---*/
+.megacol { float: left;}
+/*
+.cols1 .megacol { width: 100px }
+.cols2 .megacol { width: 50%; }
+.cols3 .megacol { width: 33.3%; }
+.cols4 .megacol { width: 25%; }
+.cols5 .megacol { width: 20%; }
+.cols6 .megacol { width: 16.6%; }
+.cols7 .megacol { width: 14.2%; }
+.cols8 .megacol { width: 12.5%; }
+.cols9 .megacol { width: 11.1%; }
+.cols10 .megacol { width: 10%; }
+
+
+.ja-megamenu .cols1 { width: 200px; }
+.ja-megamenu .cols2 { width: 400px; }
+.ja-megamenu .cols3 { width: 600px; }
+.ja-megamenu .cols4 { width: 800px; }
+.ja-megamenu .cols5 { width: 1000px; }
+.ja-megamenu .cols6 { width: 1200px; }
+.ja-megamenu .cols7 { width: 1400px; }
+.ja-megamenu .cols8 { width: 1800px; }
+.ja-megamenu .cols9 { width: 2000px; }
+.ja-megamenu .cols10 { width: 2200px; }
+*/
+
+/* Styling ---*/
+ul.level1 li.mega { border-top: 1px solid #999; height: auto; background: none;}
+
+ul.level1 li.first { border-top: 0; }
+
+ul.level1 li.mega a.mega {
+	background: none;
+	border: 0;
+	color: #e6e6e6;
+	font-weight: normal;
+	padding: 5px;
+	height: auto;
+}
+
+ul.level1 li.mega a.mega span.menu-title { background: none; padding: 0 !important; font-size: 100%; }
+
+ul.level1 li.haschild {
+	background: url(../../images/arrow.png) no-repeat 95% center;
+	padding: 0;
+}
+
+ul.level1 li.over, ul.level1 li.haschild-over { background: #333; }
+
+ul.level1 li.group { background: none; }
+
+ul.level1 li.over.first, ul.level1 li.haschild-over.first { background: #333; }
+
+ul.level1 li.active, ul.level1 li.active.first { background: none; color: #fff; }
+
+ /* CHILD CONTENT
+-----------------------------------*/
+.childcontent {
+	color: #e6e6e6;
+	z-index: 999;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.childcontent-inner-l, .childcontent-inner-r {
+	background: url(../../images/mega-bg.png) no-repeat bottom left;
+	width: 8px;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+}
+
+.childcontent-inner-l { background-position: bottom left; left: 0; }
+.childcontent-inner-r { background-position: bottom right; right: 0; }
+
+.childcontent-inner { background: url(../../images/mega-bg-m.png) repeat-x center bottom; }
+
+ul.level1 .childcontent { background: #666; border: 1px solid #999; padding-left: 0; padding-right: 0; }
+ul.level1 .childcontent-inner-l, ul.level1 .childcontent-inner-r { display: none; }
+ul.level1 .childcontent-inner { background: #666; }
+
+.childcontent .ja-moduletable {
+	color: #e6e6e6;
+	border-bottom: 0;
+	line-height: 1.5;
+	margin: 5px 0;
+	padding: 0;
+}
+
+.childcontent .ja-moduletable h3 {
+	background: none;
+	color: #fff;
+	border-bottom: 1px solid #999;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-bottom: 5px;
+	text-indent: 5px;
+	text-transform: none;
+	font-size: 115%;
+}
+
+.childcontent .ja-moduletable .ja-box-ct {
+	padding: 5px;
+}
+
+.childcontent .ja-moduletable a {
+	color: #e6e6e6;
+	text-decoration: none;
+	border-bottom: 1px dotted #ccc;
+}
+
+.childcontent .ja-moduletable a:hover,
+.childcontent .ja-moduletable a:focus,
+.childcontent .ja-moduletable a:active {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
+}
+
+.childcontent .ja-moduletable ul:first-child {
+	margin-top: 0 !important;
+}
+
+.childcontent .ja-moduletable li {
+	background: url(../../images/bullet2.gif) no-repeat 2px 7px !important;
+	margin-bottom: 5px;
+}
+
+/* Grouped --- */
+div.group { }
+
+.group-title { overflow: hidden; }
+
+.group-title .menu-title {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 115%;
+}
+
+.group-title .menu-desc {
+	color: #ccc;
+	padding-left: 0 !important;
+}
+
+.group-content .ja-moduletable,
+.group-content ul.megamenu  {
+	margin: 5px; /* Group-content's gutter*/
+}
+
+/* reset --- */
+.childcontent ul.megamenu .ja-moduletable {
+	padding: 0;
+}
+
+.childcontent ul.megamenu .ja-moduletable h3 {
+	margin-left: 0;
+	margin-right: 0;
+}
+

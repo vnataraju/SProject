@@ -1,0 +1,5 @@
+#cLatestMembers ul {list-style:none; margin: 0 0 10px; padding: 0; display:inline-block; width:100%;}
+#cLatestMembers ul li {display: inline-block; margin: 0 3px 3px 0; background: none;}
+#cLatestMembers ul li a {text-decoration:none; display:inline-block;}
+#cLatestMembers ul li a:hover {background:none; outline:none; text-decoration:none;}
+#cLatestMembers ul li img {width:32px;border:1px solid #ccc; display:inline-block;}

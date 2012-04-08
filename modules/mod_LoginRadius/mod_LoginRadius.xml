@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7" client="site" method="upgrade">
+	<name>Social Login</name>
+    <creationDate>Feb 2012</creationDate>
+    <author>LoginRadius</author>
+    <authorEmail>developers@loginradius.com</authorEmail>
+    <authorUrl>www.LoginRadius.com</authorUrl>
+    <copyright>Copyright (C) 2012 - till Open Source Matters. All rights reserved.</copyright>
+    <license>GPL 2.0</license>
+    <version>1.3</version>
+    <description>LoginRadius enables social login on Joomla websites.</description>
+	
+	<files>
+	<filename>mod_LoginRadius.xml</filename>
+    <filename module="mod_LoginRadius">mod_LoginRadius.php</filename>
+	<filename module="mod_LoginRadius">helper.php</filename>
+	<filename module="mod_LoginRadius">LoginRadiusSDK.php</filename>
+	<filename module="mod_LoginRadius">style.css</filename>
+	<filename module="mod_LoginRadius">index.html</filename>
+	<filename module="mod_LoginRadius">tmpl/default.php</filename>
+	<filename module="mod_LoginRadius">tmpl/index.html</filename>
+	
+    </files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_LoginRadius.ini</language>
+		<language tag="en-GB">languages/en-GB.mod_LoginRadius.sys.ini</language>
+		<language tag="fr-FR">languages/fr-FR.mod_LoginRadius.ini</language>
+		<language tag="fr-FR">languages/fr-FR.mod_LoginRadius.sys.ini</language>
+        <language tag="es-ES">languages/es-ES.mod_LoginRadius.ini</language>
+		<language tag="es-ES">languages/es-ES.mod_LoginRadius.sys.ini</language>
+        <language tag="ru-RU">languages/ru-RU.mod_LoginRadius.ini</language>
+		<language tag="ru-RU">languages/ru-RU.mod_LoginRadius.sys.ini</language>
+		<language tag="it-IT">languages/it-IT.mod_LoginRadius.ini</language>
+		<language tag="it-IT">languages/it-IT.mod_LoginRadius.sys.ini</language>
+		<language tag="de-DE">languages/de-DE.mod_LoginRadius.ini</language>
+		<language tag="de-DE">languages/de-DE.mod_LoginRadius.sys.ini</language>
+   </languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			   <field
+					name="apikey"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="2"
+					label="MOD_LOGINRADIUS_FIELD_API_KEY_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_API_KEY_DESC" />
+					
+				<field
+					name="apisecret"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="2"
+					label="MOD_LOGINRADIUS_FIELD_API_SECRET_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_API_SECRET_DESC" />
+				<field
+					name="pretext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="2"
+					label="MOD_LOGINRADIUS_FIELD_PRE_TEXT_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_PRE_TEXT_DESC" />
+				<field
+					name="posttext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="2"
+					label="MOD_LOGINRADIUS_FIELD_POST_TEXT_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_POST_TEXT_DESC" />
+				<field
+					name="login"
+					type="menuitem"
+					disable="separator"
+					label="MOD_LOGINRADIUS_FIELD_LOGIN_REDIRECTURL_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_LOGIN_REDIRECTURL_DESC" >
+					<option 
+						value="">JDEFAULT</option>
+				</field>
+				<field
+					name="logout"
+					type="menuitem"
+					disable="separator"
+					label="MOD_LOGINRADIUS_FIELD_LOGOUT_REDIRECTURL_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_LOGOUT_REDIRECTURL_DESC" >
+					<option 
+						value="">JDEFAULT</option>
+				</field>
+				
+				<field
+					name="greeting"
+					type="radio"
+					default="1"
+					label="MOD_LOGINRADIUS_FIELD_GREETING_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_GREETING_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+				<field
+					name="name"
+					type="list"
+					default="0"
+					label="MOD_LOGINRADIUS_FIELD_NAME_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_NAME_DESC">
+					<option
+						value="0">MOD_LOGINRADIUS_VALUE_NAME</option>
+					<option
+						value="1">MOD_LOGINRADIUS_VALUE_USERNAME</option>
+				</field>
+				<field
+					name="dummyemail"
+					type="list"
+					default="0"
+					label="MOD_LOGINRADIUS_FIELD_EMAIL_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_EMAIL_DESC">
+					<option value="0">JYes</option>
+                    <option value="1">JNo</option>
+				</field>
+				<field
+					name="usetrad"
+					type="radio"
+					default="1"
+					label="MOD_LOGINRADIUS_FIELD_USETRAD_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_USETRAD_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+				<field
+					name="usesecure"
+					type="radio"
+					default="0"
+					label="MOD_LOGINRADIUS_FIELD_USESECURE_LABEL"
+					description="MOD_LOGINRADIUS_FIELD_USESECURE_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

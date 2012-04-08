@@ -1,0 +1,113 @@
+<?php
+
+/*
+ * File:		index.tmpl.css
+ * Version:		3.2
+ * Purpose:		This is MyBlog's 'BlueStyle' main blog page template
+ * Author:		Slashes & Dots Sdn. Bhd.
+ * URL:			http://www.azrul.com
+ */
+
+
+if ($entry and is_array($entry) and count($entry) != 0)
+{
+	foreach ($entry as $e)
+	{
+		// Parse the date string to extract the month/day and year, as this theme uses a special
+		// way of displaying the post dates on each posts
+		$date = strtotime($e['created']);
+		$month_day = strftime("%b ", $date) . strftime("%d", $date);
+		$year = strftime("%Y", $date);
+		$month_day = i8n_date($month_day);
+	?>
+
+		<div class="entryContent">
+			
+			<!-- start one entry -->
+			<div class="entry">
+				
+				<div class="entryHeader">
+
+					<!-- Start the special date container -->
+					<div class="dateContainer">		
+						<div class="date">
+							<div class="month"><span><?php echo $month_day; ?></span></div>
+							<div class="year"><span><?php echo $year; ?></span></div>
+						</div>
+					</div>
+					<!-- /date container -->
+
+					<!-- Show Avatar if it is enabled -->
+					<?php if(!empty($e['avatar'])){ ?>
+						<div class="userAvatar">
+							<?php echo $e['avatar']; ?>
+						</div>
+					<?php } ?>
+					<!-- /avatar -->
+
+					<!-- Start entry title -->
+					<div class="entry-title">
+						<h3><a href="<?php echo $e['permalink']; ?>"><?php echo $e['title']; ?></a></h3>
+						<p><?php echo JText::_('COM_MY_POSTED_BY'); ?> <a href="<?php echo $e['authorLink']; ?>"><?php echo $e['author']; ?></a> in <?php echo $e['categories']; ?></p>
+					</div>
+					<!-- /entry title -->
+					
+					<div class="clear"></div>
+				</div>
+				
+				<div class="clear"></div>
+				<?php
+				if (isset($e['beforeContent']))
+				{ ?>
+					<div class="onBeforePrepareContent">
+						<?php echo $e['beforeContent'];?>
+					</div>
+				<?php
+				}
+				?>
+			
+				<div class="entry-body"> 
+					<article>
+						<?php echo $e['text']; ?>
+					</article>
+					<div class="clear"></div> 
+				</div>
+					
+				<?php
+				if (isset($e['afterContent']))
+				{ ?>
+					<div class="onAfterPrepareContent">
+						<?php echo $e['afterContent'];?>
+					</div>
+				<?php
+				}
+		    ?>
+		
+				<div class="entry-footer">
+					<?php
+					if(isset($e['comments']))
+					{
+						if ($e['comments']!="") // if comments enabled
+							echo '<div class="entry-comment"><a href="'.$e['permalink'].'#comments">'.$e['comments'] .'</a>';
+						else
+							echo '<div>';
+						if ($e['comments']!="" and $e['readmore']=="1")
+					 		echo ' | ';
+					}
+					?>
+				
+					<?php  // IF NEED readmore
+					if ($e['readmore']=="1")
+					{ ?>
+						<a href="<?php echo $e['permalink']; ?><?php echo $showAnchor; ?>"><?php echo JText::_('COM_MY_READMORE');?></a>
+					<?php
+					}
+					?>
+				</div> 
+			</div>
+		</div>
+	</div>
+<?php
+	}
+}
+?>

@@ -1,0 +1,89 @@
+<!-- Blog Entries Start -->
+<div id="myBlog-content">
+<?php
+
+if(!$avatar_w) $avatar_w = 40;
+
+if ($entry and is_array($entry) and count($entry) != 0)
+{
+	foreach ($entry as $e)
+	{
+?>
+	<!-- Entry -->
+	<div class="postSummary<?php if ($e['is_quickpost']) echo ' mbqp-'.$e['quickpost_type']; ?>" id="post-<?php echo $e['id']; ?>">
+		
+		<?php if ( $e['quickpost_type'] != 'quote' )
+		{
+		?>
+			<!-- Post Top Summary -->
+			<div class="postSummary-top">
+				<h2 class="component mbHeader"><a href="<?php echo $e['permalink']; ?>"><?php echo $e['title']; ?></a></h2>
+			
+				<div class="mbMetaWrap">
+					<?php if(!empty($e['avatar'])) { ?>
+						<div class="userAvatar">
+							<?php echo $e['avatar']; ?>
+						</div>
+					<?php	}	?>
+					<div class="postSummary-meta">
+						<a href="<?php echo $e['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $e['author']; ?></a>
+						<?php if( $categoryDisplay ) {
+							echo JText::sprintf('COM_MY_POSTED_IN' , $e['jcategory'] );
+						}
+						?>
+						<?php echo JText::sprintf('COM_MY_POSTED_ON', $e['createdFormatted']); ?>
+						<br />
+						<?php echo JText::sprintf('COM_MY_TAGGED_IN' , $e['categories'] ); ?>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!-- End Post Top Summary -->
+		<?php
+		}
+		?>
+		
+		<!-- Post Teaser Text -->
+		<div class="postSummary-teaser" style="margin-left: <?php if ( $e['quickpost_type'] != 'quote' ) echo $avatar_w + 10; ?>px">
+			<?php echo $e['text']; ?>
+			
+			<?php if ( $e['quickpost_type'] == 'quote' ) { ?>
+				<a class="mbqp-quote-author" href="<?php echo $e['permalink']; ?>"><?php echo $e['title']; ?></a>
+				<div class="mbqp-quote-posted"><?php echo JText::_('COM_MY_POSTED_BY');?> <a href="<?php echo $e['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $e['author']; ?></a></div>
+			<?php } ?>
+			
+			<div class="clear"></div>
+			
+			<!-- Post Footer -->						
+			<div class="postSummary-footer">
+				<!-- Start: Comment Count -->
+				<?php if (isset($e['comments']) && $e['comments']!="") { ?>
+					<a href="<?php echo $e['permalink']; ?>#comments" class="postSummary-comments"><?php echo $e['comments']; ?></a>
+				<?php } ?>
+				<!-- End: Comment Count -->
+
+				<!-- Start: Read More -->
+				<?php if ($e['readmore']=="1") { ?>
+					<div class="postSummary-readmore">
+						<a href="<?php echo $e['permalink']; ?><?php echo $showAnchor; ?>" class="postSummary-readmore"><?php echo JText::_('COM_MY_READMORE');?></a>
+					</div>
+					<div class="clear"></div>
+				<?php } ?>
+				<!-- End: Read More -->
+			</div>
+		</div>
+		<!-- Post Divider -->
+		<hr class="postEntry-divider" />
+	</div>
+	<div class="clear"></div>
+<?php
+	}
+}
+else
+{
+?>
+	<div><?php echo JText::_('COM_MY_NO_BLOG_ENTRY_CREATED');?></div>
+<?php
+}
+?>
+</div>

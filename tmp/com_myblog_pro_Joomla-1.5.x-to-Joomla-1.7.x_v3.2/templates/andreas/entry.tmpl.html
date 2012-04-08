@@ -1,0 +1,67 @@
+<div class="blogsContainer entryContent entry">
+	<div class="entryTitle">
+		<h2><a href="<?php echo $entry['permalink']; ?>" rel="bookmark" title="Permanent Link to <?php echo $entry['title']; ?>"><?php echo $entry['title']; ?></a></h2>
+
+	</div>
+	<div class="post">
+		<?php 
+		if ($entry['beforeContent'])
+		{ ?>
+		<div class="onBeforePrepareContent">
+			<?php echo $entry['beforeContent'];?>
+		</div>
+		<?php
+		}
+		?>
+			<?php if( $enablePrintLink || $enablePdfLink || $entry['created_by'] == $userId ) { ?>
+				<div class="mbContentRight">
+					<?php
+					if($enablePrintLink){
+						echo myGetPrintLink($entry['id'],myGetItemId());
+					}
+					if($enablePdfLink){
+						echo myGetPDFLink($entry['id'],myGetItemId());
+					}
+					if($entry['created_by'] == $userId)
+					{
+						echo $entry['editLink'];
+					}
+					?>
+				</div>
+			<?php } ?>
+	    <div class="entry-body">
+				<article> <!-- enable Safari Reader compatiblity -->
+	      <?php echo $entry['text']; ?>
+				</article>
+		  <div class="clear"></div><br/>
+	    </div>
+	    <?php if ($entry['afterContent'])
+		{ ?>
+		<div class="onAfterPrepareContent">
+			<?php echo $entry['afterContent'];?>
+		</div>
+		<?php
+		}
+	    ?>
+	    <div class="entry-footer">
+	    	<span class="date"><a><?php echo $entry['createdFormatted']; ?></a></span>
+	    	<?php echo JText::_('COM_MY_POSTED_BY'); ?>: <a href="<?php echo $entry['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $entry['author']; ?></a> |
+			<?php
+				if( $categoryDisplay )
+				{
+			?>
+			<?php echo JText::sprintf('COM_MY_POSTED_IN' , $entry['jcategory'] ); ?>
+			<?php
+				}
+			?> 
+	    </div>
+	    <div><?php echo JText::sprintf('COM_MY_TAGGED_IN' , $entry['categories'] ); ?></div>
+	    <br />
+	    <div class="socialButton">
+		<?php echo $fbShare?myFbShare($e['permalink']).'':'' ?>
+		<?php echo $googleShare?myGooglePlusShare($e['permalink']).'':''?>
+		<?php echo $twitterShare?myTweetShare($e['permalink']):''?>
+	    </div>
+	    <div class="fComments"><?php echo $entry['comments'] ?></div>
+	</div>
+</div>

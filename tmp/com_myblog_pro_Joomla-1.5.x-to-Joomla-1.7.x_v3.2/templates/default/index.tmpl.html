@@ -1,0 +1,62 @@
+<!-- Blog Entries Start -->
+<div id="myBlog-content">
+<?php
+if ($entry and is_array($entry) and count($entry) != 0)
+{ ?>
+	
+	<ul class="mbPostList">
+	
+<?php
+	foreach ($entry as $e)
+	{
+?>
+
+		<li class="mbPosts<?php if ($e['is_quickpost']) echo ' mbqp-'.$e['quickpost_type']; ?>" id="post-<?php echo $e['id']; ?>">
+			<h3 class="mbTitle"><a href="<?php echo $e['permalink']; ?>"><?php echo $e['title']; ?></a></h3>
+
+			<div class="mbOuterWrap">
+			
+				<?php if(!empty($e['avatar'])) { ?>
+					<div class="mbAvatar" style="width: <?php echo ($avatar_w) ? $avatar_w : '40'; ?>px">
+					<?php echo $e['avatar']; ?>
+					</div>
+				<?php	}	?>
+			
+				<div class="mbContentWrap" style="margin-left: <?php if(!empty($e['avatar'])) { echo ($avatar_w) ? $avatar_w + 10 : '50'; } else { echo '0'; } ?>px">
+				
+					<div class="mbMeta">
+						<a href="<?php echo $e['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $e['author']; ?></a>
+						<?php if( $categoryDisplay ) {
+							echo JText::sprintf('COM_MY_POSTED_IN' , $e['jcategory'] );
+						}
+						?>
+						<?php echo JText::sprintf('COM_MY_POSTED_ON', $e['createdFormatted']); ?>
+						<br />
+						<?php echo JText::sprintf('COM_MY_TAGGED_IN' , $e['categories'] ); ?>
+					</div>
+					
+					<div class="mbEntry">
+						<?php echo $e['text']; ?>
+					</div>
+					
+				</div>
+			
+			</div>
+
+			<div class="clear"></div>
+		</li>
+
+<?php
+	}
+?>
+	</ul>
+<?php
+}
+else
+{
+?>
+	<div><?php echo JText::_('COM_MY_NO_BLOG_ENTRY_CREATED');?></div>
+<?php
+}
+?>
+</div>

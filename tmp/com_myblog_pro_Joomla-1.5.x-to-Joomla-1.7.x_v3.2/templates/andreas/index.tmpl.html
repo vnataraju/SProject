@@ -1,0 +1,72 @@
+<div class="blogsContainer">
+<?php
+if ($entry and is_array($entry) and count($entry) != 0)
+{
+	foreach ($entry as $e)
+	{
+?>
+<div class="entryContent entry">
+	<div class="entryTitle">
+		<h2><a href="<?php echo $e['permalink']; ?>" rel="bookmark" title="Permanent Link to <?php echo $e['title']; ?>"><?php echo $e['title']; ?></a></h2>
+	</div>
+	<div class="post">
+		<?php
+        	if (isset($e['beforeContent']))
+			{ ?>
+			<div class="onBeforePrepareContent">
+				<?php echo $e['beforeContent'];?>
+			</div>
+			<?php
+			}
+		    ?>
+	    <div class="entry-body">
+	      
+	      <?php echo $e['text']; ?>
+		  <div class="clear"></div><br/>
+<?php
+		// IF NEED readmore
+		if ($e['readmore']=="1")
+		{
+?>
+		<div>
+		<a href="<?php echo $e['permalink']; ?><?php echo $showAnchor; ?>" class="postSummary-readmore"><?php echo JText::_('COM_MY_READMORE');?></a>
+		</div>
+<?php
+		}
+?>
+	    </div>
+	    <?php if (isset($e['afterContent']))
+			{ ?>
+			<div class="onAfterPrepareContent">
+				<?php echo $e['afterContent'];?>
+			</div>
+			<?php
+			}
+		    ?>
+	    <div class="entry-footer">
+	    	<span class="date"><a><?php echo JText::sprintf('COM_MY_POSTED_ON', $e['createdFormatted']); ?></a></span>
+	    	<?php echo JText::_('COM_MY_POSTED_BY'); ?>: <a href="<?php echo $e['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $e['author']; ?></a>
+			<?php
+				if( $categoryDisplay )
+				{
+			?>
+			<?php echo JText::sprintf('COM_MY_POSTED_IN' , $e['jcategory'] ); ?>
+			<?php
+				}
+			?>
+		  <?php 
+		  if(isset($e['comments'])){
+			  if ($e['comments']!="") echo "| "; 
+			echo '<a href="'.$e['permalink'].'#comments">'.$e['comments'].'</a>';
+		  }
+		  ?>
+		  
+	    </div>
+	    <div class="TaggedIndex"><?php echo JText::sprintf('COM_MY_TAGGED_IN' , $e['categories'] ); ?></div>
+	</div>
+</div>
+<?php
+	}
+}
+?>
+</div>

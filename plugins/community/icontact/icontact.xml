@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="community" method="upgrade">
+	<name>icontact</name>
+	<author>AzrulStudio</author>
+	<creationDate>17 June 2010</creationDate>
+	<copyright>Copyright (C) 2008. All rights reserved.</copyright>
+	<license>http://www.azrul.com</license>
+	<authorEmail>support@azrul.com</authorEmail>
+	<authorUrl>www.azrul.com</authorUrl>
+	<version>1.8</version>
+	<isapplication>true</isapplication>
+	<description>
+		icontact Application for Jom Social
+	</description>
+	<files>
+		<file plugin="icontact">icontact.php</file>
+		<folder>icontact</folder>
+	</files>
+	
+	<params>
+		<param name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appearin the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="host" type="text" default="https://app.icontact.com/icp" label="Host" description="Example: https://app.icontact.com/icp" size="48"/>
+		<param name="application_id" type="text" default="9okWEkILqU77PqWWSSfQXppdiSHCebDe" label="Application ID" description="Application ID. Please visit http://jomsocial.com for any update" size="48"/>
+		<param name="password" type="text" default="" label="Application Password" description="Application Password. You may leave this as it is" size="35"/>
+		<param name="account_id" type="text" default="" label="iContact Username" description="Your iContact username"  size="35"/>
+		<param name="list_id" type="text" default="" label="List Id" description="Put the exact iContact list name you want to sync your user with. This list must be first created in iContact" size="35"/>
+		<param name="@spacer" type="spacer" default="" label="Optional" description="" />
+        <param name="givenname" type="sql" default="" description="First Name" label="Given Name" query="SELECT '' AS value, '' AS givenname UNION SELECT fieldcode AS value, fieldcode as givenname FROM #__community_fields WHERE fieldcode !=''" />
+        <param name="familyname" type="sql" default="" description="Last Name" label="Family Name" query="SELECT '' AS value, '' AS familyname UNION SELECT fieldcode AS value, fieldcode as familyname FROM #__community_fields WHERE fieldcode !=''" />
+        <param name="city" type="sql" default="" label="City" description="City" query="SELECT '' AS value, '' AS city UNION SELECT fieldcode AS value, fieldcode as city FROM #__community_fields WHERE fieldcode !=''" />
+		<param name="address" type="sql" default="" label="Address" description="Street" query="SELECT '' AS value, '' AS address UNION SELECT fieldcode AS value, fieldcode as address FROM #__community_fields WHERE fieldcode !=''" />
+		<param name="state" type="sql" default="" label="State" description="State" query="SELECT '' AS value, '' AS state UNION SELECT fieldcode AS value, fieldcode as state FROM #__community_fields WHERE fieldcode !=''" />
+        <param name="phone" type="sql" default="" label="Phone" description="Phone" query="SELECT '' AS value, '' AS phone UNION SELECT fieldcode AS value, fieldcode as phone FROM #__community_fields WHERE fieldcode !=''" />
+	</params>
+</install>

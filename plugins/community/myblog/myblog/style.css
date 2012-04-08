@@ -1,0 +1,30 @@
+div#community-plugin-myblog div.content-nopost {
+	margin: 0 10px 0 31px;
+	min-height: 22px;
+	line-height: auto;
+}
+div#community-plugin-myblog div.icon-nopost {
+	float: left;
+	min-height: 22px;
+	padding: 4px 10px 0 5px;
+}
+.mb-content {
+	padding: 5px;
+}
+h2.mb-title {
+	margin: 0;
+	padding: 0 0 0 5px;
+}
+h2.mb-title a {
+	text-decoration: none;
+}
+.comments {
+	background: transparent url(comments.gif) no-repeat top left;
+	height: 16px;
+	padding-left: 22px;
+	margin-left: 5px;
+	float: right;
+}
+.ctitle a {
+	text-decoration: none;
+}

@@ -1,0 +1,100 @@
+<?php
+$date  = strtotime($entry['created']);
+$month = strftime("%b ", $date) . strftime("%d", $date);
+$year  = strftime("%Y", $date);
+$month = i8n_date($month);
+?>
+<br/>
+<div class="entryContent">
+	
+	<div class="entry">
+			<div class="entryHeader">
+
+				<!-- Start the special date container -->
+				<div class="dateContainer">		
+					<div class="date">
+						<div class="month"><span><?php echo $month; ?></span></div>
+						<div class="year"><span><?php echo $year; ?></span></div>
+					</div>
+				</div>
+				<!-- /date container -->
+
+				<!-- Show Avatar if it is enabled -->
+				<?php if(!empty($entry['avatar'])){ ?>
+					<div class="userAvatar">
+						<?php echo $entry['avatar']; ?>
+					</div>
+				<?php } ?>
+				<!-- /avatar -->
+
+				<!-- Start entry title -->
+				<div class="entry-title">
+					<h3><a href="<?php echo $entry['permalink']; ?>"><?php echo $entry['title']; ?></a></h3>
+					<p>
+						<?php echo JText::_('COM_MY_POSTED_BY'); ?>: <a href="<?php echo $entry['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $entry['author']; ?></a>
+						<?php
+							if( $categoryDisplay )
+							{
+						?>
+						<?php echo JText::sprintf('COM_MY_POSTED_IN' , $entry['jcategory'] ); ?>
+						<?php
+							}
+						?>
+						<span class="post-date"><?php echo JText::sprintf('COM_MY_POSTED_ON', $entry['createdFormatted']); ?></span>
+						<?php
+						if($entry['created_by'] == $userId)
+						{
+							echo ' | '.$entry['editLink'];
+						}
+						?>
+						<div><?php echo JText::sprintf('COM_MY_TAGGED_IN' , $entry['categories'] ); ?></div>
+					</p>
+					<?php
+					if($enablePrintLink)
+					{
+						echo myGetPrintLink($entry['id'],myGetItemId());
+					}
+					if($enablePdfLink)
+					{
+						echo myGetPDFLink($entry['id'],myGetItemId());
+					}
+					?>
+				</div>
+				<!-- /entry title -->
+				
+				<div class="clear"></div>
+			</div>
+			
+			<div class="clear"></div>
+
+		<?php 
+		if (!empty($entry['beforeContent']))
+		{ ?>
+		<div class="onBeforePrepareContent">
+			<?php echo $entry['beforeContent'];?>
+		</div>
+		<?php
+		}
+	    ?>
+        <div class="entry-body"> <?php echo $entry['text']; ?> <div class="clear"></div> </div>
+        <?php if ($entry['afterContent'])
+		{ ?>
+		<div class="onAfterPrepareContent">
+			<?php echo $entry['afterContent'];?>
+		</div>
+		<?php
+		}
+	    ?>
+		<br />
+		<div class="socialButton">
+		    <?php echo $fbShare?myFbShare($e['permalink']).'<br /><br />':'' ?>
+		    <?php echo $googleShare?myGooglePlusShare($e['permalink']).'<br /><br />':''?>
+		    <?php echo $twitterShare?myTweetShare($e['permalink']):''?>
+		</div>
+		<div class="fComments">
+		<?php echo $entry['comments']; ?>
+		</div>
+				<div class="entry-footer"></div>
+    </div>
+	
+</div>

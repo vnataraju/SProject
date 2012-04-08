@@ -1,0 +1,70 @@
+<!-- some header stuff -->
+<link href="<?php echo MY_COM_LIVE; ?>/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="<?php echo MY_COM_LIVE; ?>/css/ui.css" type="text/css" media="screen" />
+<div class="mbCommonWrap">
+<!--[if lte IE 6]>
+<link href="<?php echo MY_COM_LIVE; ?>/css/style.IE6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+<link href="<?php echo MY_COM_LIVE; ?>/css/style.IE7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--JavaScript--> 
+<script type="text/javascript" src="<?php echo MY_COM_LIVE; ?>/js/myblog.js"></script>
+<!-- start tab navigation -->
+	<ul id="myblogTabNav">
+		<li><a href="<?php echo JRoute::_('index.php?option=com_myblog&task=adminhome&Itemid='.myGetAdminItemId());?>"><?php echo JText::_('COM_MY_ADMIN_MY_ENTRIES');?></a></li>
+		<li><a class="current" href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerpref&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_ADMIN_MENU_PREFERENCES');?></a></li>
+		<li><a href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerstats&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_ADMIN_MENU_STATS');?></a></li>
+                <li><a href="<?php echo JRoute::_('index.php?option=com_myblog&task=bloggerintegration&Itemid='.myGetAdminItemId() );?>"><?php echo JText::_('COM_MY_INTEGRATION');?></a></li>
+        </ul>
+<!-- end tab navigation -->
+<?php
+$user	= $user[0];
+?>
+<h2 class="componentheading"><?php echo JText::_('COM_MY_BLOG_ADMIN_PREFERENCES_LEGEND');?></h2>
+<form id="blogger-info" name="blogger-info" action="<?php echo JRequest::getURI();?>" method="POST">
+	<div id="myblogSearch" class="mbFormsElement">
+	    <table border="0" cellpadding="5" cellspacing="2" width="100%">
+	    	<tbody>
+	        	<tr>
+	            	<td>
+	                	<label><?php echo JText::_('COM_MY_BLOG_ADMIN_PREFERENCES_TITLE');?><br />
+	                		<input name="blog-title" type="text" class="jc_inputbox" id="blog-title" style="width: 100%" value="<?php echo $user->title; ?>" />
+	            		</label>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td>
+	                	<label><?php echo JText::_('COM_MY_BLOG_ADMIN_PREFERENCES_DESCRIPTION');?><br />
+	                        <textarea name="blog-subtitle" cols="47" rows="6" class="jc_inputbox" id="blog-subtitle" style="width: 100%"><?php echo stripslashes( $user->description ); ?></textarea>
+	                    </label>
+	                </td>
+	            </tr>
+		    <?php
+		    if ( $showFeedburner ) :
+		    ?>
+		    <tr>
+	                <td>
+	                	<label><?php echo JText::_('COM_MY_BLOG ADMIN_PREFERENCES_FEEDBURNER');?><br />
+	                        <input type="text" value="<?php echo $user->feedburner; ?>" name="feedburnerURL" size="40" /></label>
+	                </td>
+	            </tr>
+		    <?php endif?>
+
+		    <?php
+		    if ( $showGoogleGears ) :
+		    ?>
+		    <tr>
+	                <td>
+	                	<label><?php echo JText::_('COM_MY_GOOGLE_GEARS_DESC'); ?><br />
+	                        <?php echo JHTML::_('select.booleanlist' , 'googlegears' , null , $user->googlegears , JText::_('Yes') , JText::_('No') ); ?></label>
+	                </td>
+	            </tr>
+		    <?php endif?>
+	        </tbody>
+	    </table>
+	
+		<input type="submit" name="submit-blogger" id="submit-blogger" value="<?php echo JText::_('COM_MY_SUBMIT_BUTTON');?>" />
+	</div>
+</form>
+</div>

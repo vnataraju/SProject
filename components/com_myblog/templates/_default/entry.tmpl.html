@@ -1,0 +1,96 @@
+<?php
+$e = $entry;
+?>
+<!-- Entry -->
+<div class="postContent" id="post-<?php echo $e['id']; ?>">
+	<!-- Display onBeforeDisplayContent mambots -->
+	<?php
+		if(isset($entry['beforeContent']) && $entry['beforeContent'])
+		{
+			echo $entry['beforeContent'];
+		}
+	?>
+	<!-- End display -->
+	<!-- Post Top Summary -->
+	<div class="postSummary-top">
+		<h2 class="componentheading mbHeader"><a href="<?php echo $e['permalink']; ?>"><?php echo $e['title']; ?></a></h2>
+		
+		<div class="mbMetaWrap">
+			
+			<?php if ($enablePrintLink || $enablePdfLink) { ?>
+				<div class="mbMetaIcons">
+					<?php
+						if($enablePrintLink)
+						{
+							echo myGetPrintLink($entry['id'],myGetItemId());
+						}
+						echo '&nbsp;';
+
+						if($enablePdfLink)
+						{
+							echo myGetPDFLink($entry['id'],myGetItemId());
+						}
+					?>
+				</div>
+			<?php } ?>
+		
+			<?php if(!empty($e['avatar'])) { ?>
+				<div class="userAvatar">
+					<?php echo $e['avatar']; ?>
+				</div>
+			<?php	}	?>
+			<div class="postSummary-meta">
+				<a href="<?php echo $e['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $e['author']; ?></a>
+				<?php if( $categoryDisplay ) {
+					echo JText::sprintf('COM_MY_POSTED_IN' , $e['jcategory'] );
+				}
+				?>
+				<?php echo JText::sprintf('COM_MY_POSTED_ON', $e['createdFormatted']); ?>
+				<?php
+					if($entry['created_by'] == $userId)
+					{
+						echo ' &middot; '.$e['editLink'];
+					}
+				?>
+				<br />
+				<?php echo JText::sprintf('COM_MY_TAGGED_IN' , $e['categories'] ); ?>
+			</div>
+		
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+	<!-- End Post Top Summary -->
+	
+	<!-- Post Content -->
+	<div class="postContent-text">
+		<article> <!-- enable Safari Reader compatiblity -->
+		<?php echo $e['text']; ?>
+		</article> <!-- enable Safari Reader compatiblity -->
+		<div class="clear"></div>
+	</div>
+	<!-- end Post Text -->
+	
+	<div class="clear"></div>
+
+	<br />
+	<div class="socialButton">
+	    <?php echo $fbShare?myFbShare($e['permalink']).'<br /><br />':'' ?>
+	    <?php echo $googleShare?myGooglePlusShare($e['permalink']).'<br /><br />':''?>
+	    <?php echo $twitterShare?myTweetShare($e['permalink']):''?>
+	</div>
+	<div class="postComments">
+		<a name="comments"></a>
+		<?php echo $entry['comments']; ?>
+		<div class="clear"></div>
+	</div>
+	<!-- Display onAfterDisplayContent mambots -->
+	<?php
+		if(isset($entry['afterContent']) && $entry['afterContent']){
+			echo $entry['afterContent'];
+		}
+	?>
+	<!-- End display -->
+	
+</div>
+<div class="clear"></div>

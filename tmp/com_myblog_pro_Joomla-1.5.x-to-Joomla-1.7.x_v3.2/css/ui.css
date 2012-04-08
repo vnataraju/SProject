@@ -1,0 +1,273 @@
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 99%;
+}
+
+.smallertext {
+	font-size:87%;
+}
+
+.current {
+	font-weight:bold;
+}
+
+#myblogNewEntryButton {
+	display: block;
+	padding: 10px 0 10px 0;
+	border-top: solid 1px #3b5998;
+	font-size: 93%;
+	height: 1px;
+}
+
+#myblogTabNav {
+	background:#efefef;
+	border:1px solid #cdcccc;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	margin-bottom:10px;
+	height:25px;
+	line-height:25px;
+	padding:3px 10px !important;
+}
+
+#myblogTabNav li {
+	display:inline;
+	list-style-type:none;
+	margin-right:10px !important;
+}
+
+#myblogTabNav li a {
+	text-decoration:none;
+	color:#424242;
+}
+
+#myblogTabNav li a:hover {
+	background:none !important;
+	color:#000 !important;
+}
+
+/* =EntryList */
+#myblogEntryList {
+	width:99.8%;
+	border:1px solid #cdcccc;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#myblogEntryList li:last-child {
+	border-bottom:none;
+}
+
+#blog-entries {
+	padding-left:0 !important;
+}
+
+#blog-entries li div {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#blog-entries li {
+	list-style-type:none;
+	line-height:1.5em !important;
+}
+
+#blog-entries li:hover {
+	background:#fafafa;
+}
+
+#blog-entries li ul {
+	padding-left:0 !important;
+}
+
+#blog-entries>li {
+	border-bottom:1px solid #efefef;
+	padding:5px 0 0 !important;
+	position:relative;
+}
+
+.myblogEntryStatus {
+	border:1px solid #ccc;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	margin-left:10px;
+	background:#fff;
+}
+
+.myblogDateCreated {
+	padding:5px 10px;
+	border-right:1px solid #efefef;
+	text-align:right;
+	font-size:11px;
+	line-height:14px;
+	width: 50px;
+}
+
+.myblogPublish {
+	padding:0 10px 0 5px;	
+}
+
+.myblogPublish a:hover {
+	background:none !important;
+}
+
+.myblogTitle {
+	margin: 0 0 0 10px;
+	width: 60%;
+}
+
+.myblogTitle a {
+	font-size:15px;
+	text-decoration:none;
+	color:#555555 !important;
+}
+
+.myblogTitle a:hover {
+	background:none !important;
+	color:#424242 !important;
+}
+
+.myblogMeta {
+	font-size:11px;
+	color:#7b7b7b;
+}
+
+.myblogMeta .number {
+	color:#f29502;
+}
+
+.myblogListAction {
+	position:absolute;
+	width:100px;
+	right:10px;
+	top:20px;
+	font-weight:bold;
+	text-align: right;
+}
+
+.myblogListAction .btnEdit , .myblogListAction .btnDelete {
+	background:#cdcccc;
+	padding:5px 15px;
+	color:#fff;
+	text-decoration:none;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+.myblogListAction .btnDelete {
+	padding:5px 10px;
+}
+
+.myblogListAction .btnEdit:hover, .myblogListAction .btnDelete:hover {
+	background:#898888 !important;
+
+}
+
+.myblogPagination {float:right;}
+
+.myblogPagination ul li {
+	display:inline-block;
+}
+
+/* =EntryList end */
+
+a.azbutton {
+    background: transparent url('../images/bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    font-family: arial, sans-serif;
+    float: left;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+    border:none;
+}
+
+a.azbutton span {
+    background: transparent url('../images/bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+    border:none;
+}
+
+
+a.azbutton:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+    border:none;
+}
+
+a.azbutton:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+    outline: none; /* hide dotted outline in Firefox */
+    border:none;
+}
+
+a.azbutton:hover {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+    border:none;
+}
+
+a.azbutton:hover span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+    outline: none; /* hide dotted outline in Firefox */
+    border:none;
+}
+
+/** MyBlog editor */
+.mceSelectList {
+background-color:#F0F0EE;
+display:inline;
+font-family:'MS Sans Serif',sans-serif,Verdana,Arial;
+font-size:7pt !important;
+font-weight:normal;
+margin-top:3px;
+padding:0pt;
+vertical-align:top;
+border:none;
+}
+
+#myblog fieldset {
+	border:1px solid #CFCFCF;
+	padding:5px;
+}
+
+#myblog fieldset legend {
+	color: #808080;
+}
+
+
+body #mainContent #fulltext_tbl,
+.defaultSkin table {
+	background: #fff !important;
+}
+body .defaultSkin table.mceLayout tr.mceFirst td,
+body .defaultSkin .mceIframeContainer,
+body .defaultSkin table.mceLayout {
+	border: 0;
+}
+body .defaultSkin .mceToolbar.mceCenter.mceFirst.mceLast,
+body .mceToolbarTop {
+	border-bottom: solid 1px #ccc;
+	padding-bottom: 5px;
+	background-color:white;
+}
+body .defaultSkin table.mceLayout tr.mceLast td {
+	border-top: solid 1px #ccc;
+	border-bottom: 0;
+	background-color:white;
+}
+body #container #mainContent .mceToolbarTop .rawButtons {
+	padding: 0 5px;
+}

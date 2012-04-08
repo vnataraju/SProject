@@ -1,0 +1,467 @@
+/**
+* MyBlog Erica Theme CSS
+* @package MyBlog
+* @since version 3.2a
+* @see index.tmpl.html
+* @copyright Azrul.com
+*/
+
+#myBlog-head {
+	overflow: hidden;
+	padding: 20px 0;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+	position: relative;
+}
+	#myBlog-head h2,
+	#main #myBlog-head h2 {
+		padding: 0;
+		margin: 0 0 5px 0;
+		margin-right: 230px;
+	}
+	#myBlog-head .desc {
+		font-style: italic;
+		color: #999;
+		margin-right: 230px;
+	}
+
+#myBlog-head #myBlog-toolbar {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	float: right;
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	border-radius: 4px;
+	border: 1px solid #e2e0e1;
+	background: #fbfbfb url(../images/erica-tb-bg.png) repeat-x 0 100%;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+}
+#myBlog-head #myBlog-toolbar li {
+	display: block;
+	float: left;
+	margin: 0px 2px;
+	overflow: hidden;
+}
+#myBlog-head #myBlog-toolbar li + li {
+	border-left: 1px solid #e2e0e1;
+}
+#myBlog-head #myBlog-toolbar li:first-child a {
+	border-left: 0px none;
+}
+#myBlog-head #myBlog-toolbar li a,
+#myBlog-wrap .mbPostMeta .mbTagsIcon {
+	display: block;
+	background: transparent url(../images/sprite-16x16.png) no-repeat  0 0;
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	padding: 0;
+	text-indent: -9999px;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	}
+	#myBlog-wrap .mbPostMeta .mbTagsIcon {
+		float: left;
+		border-top: 0px none;
+		border-left: 0px none;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarHome a {
+		background-position: -6px -16px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarTags a,
+	#myBlog-wrap .mbPostMeta .mbTagsIcon {
+		background-position: -6px -58px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarSearch a {
+		background-position: -6px -101px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarBloggers a {
+		background-position: -6px -142px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarWrite a {
+		background-position: -6px -186px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarWriteQuick a {
+		background-position: -6px -228px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarFeed a {
+		background-position: -6px -268px;
+	}
+	/* hover state */
+	#myBlog-head #myBlog-toolbar li#toolbarHome a:hover {
+		background-position: -46px -16px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarTags a:hover {
+		background-position: -46px -58px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarSearch a:hover {
+		background-position: -46px -101px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarBloggers a:hover {
+		background-position: -46px -142px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarWrite a:hover {
+		background-position: -46px -186px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarWriteQuick a:hover {
+		background-position: -46px -228px;
+	}
+	#myBlog-head #myBlog-toolbar li#toolbarFeed a:hover {
+		background-position: -46px -268px;
+	}
+	/* active state */
+	#myBlog-head #myBlog-toolbar li.blogActive#toolbarHome a {
+		background-position: -86px -16px;
+	}
+	#myBlog-head #myBlog-toolbar li.blogActive#toolbarTags a {
+		background-position: -86px -58px;
+	}
+	#myBlog-head #myBlog-toolbar li.blogActive#toolbarSearch a {
+		background-position: -86px -101px;
+	}
+	#myBlog-head #myBlog-toolbar li.blogActive#toolbarBloggers a {
+		background-position: -86px -142px;
+	}
+	#myBlog-head #myBlog-toolbar li.blogActive#toolbarWrite a {
+		background-position: -86px -186px;
+	}
+	#myBlog-head #myBlog-toolbar li.blogActive#toolbarWriteQuick a {
+		background-position: -86px -228px;
+	}
+	#myBlog-head #myBlog-toolbar li.blogActive#toolbarFeed a {
+		background-position: -86px -268px;
+	}
+
+
+/* single post wrapper */
+#myBlog-wrap .mbPostTitle {
+	border-bottom: 1px solid #e2e0e1;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+	background: #fbfbfb url(../images/erica-tb-bg.png) repeat-x 0 100%;
+}
+
+#myBlog-wrap .mbPostTitle h3 {
+	padding: 15px;
+	margin: 0;
+	line-height: 1.3;
+	font-size: 22px;
+}
+
+#myBlog-wrap .mbPostTitle h3,
+#myBlog-wrap .mbPostTitle h3 a {
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #fff;
+}
+
+#myBlog-wrap .mbPost {
+	border: 1px solid #e2e0e1;
+	background: #fbfbfb url(../images/erica-tb-bg.png) repeat-x 0 100%;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+	padding: 0;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+	#myBlog-wrap .mbPost + .mbPost {
+		margin-top: 25px;
+	}
+
+	#myBlog-wrap .mbPost .mbPostContent {
+		background: #fff;
+		padding: 15px;
+		position: relative;
+		z-index: 1;
+	}
+	
+	
+	#myBlog-wrap .mbPost .mbPostContent .mbPostTip {
+		position: absolute;
+		width: 20px;
+		height: 11px;
+		background: transparent url(../images/erica-tip.png) no-repeat 0 0;
+		left: 20px;
+		bottom: -11px;
+		z-index: 4;
+	}
+
+	#myBlog-wrap .mbPost .mbPostContent img {
+		max-width: 100%;
+	}
+
+	#myBlog-wrap .mbPost .mbPostContent p {
+		margin: 0;
+		padding: 0;
+	}
+
+	#myBlog-wrap .mbPost .mbPostContent p + p {
+		margin-top: 15px;
+	}
+	
+	#myBlog-wrap .mbqp-quote blockquote {
+		font: normal 22px/32px 'Georgia', 'Times New Roman', serif;
+		display: block;
+		padding: 0 20px 0 90px;
+		font-style: italic;
+		background: transparent url(../images/blockquote.png) no-repeat 0 0;
+		min-height: 60px;
+	}
+	#myBlog-wrap .mbqp-quote .mbqp-quote-author {
+		margin-left: 90px;
+		margin-top: 20px;
+		text-align: right;
+		font-size: 16px;
+		color: #666;
+	}
+	
+	#myBlog-wrap .mbPost.mbqp-video .mbPostContent p,
+	#myBlog-wrap .mbPost.mbqp-photo .mbPostContent p {
+		margin-top: 15px;
+	}
+	
+	#myBlog-wrap .mbPost.mbqp-video .mbPostContent p:empty,
+	#myBlog-wrap .mbPost.mbqp-photo .mbPostContent p:empty,
+	#myBlog-wrap .mbPost.mbqp-video .mbPostContent p:first-child,
+	#myBlog-wrap .mbPost.mbqp-photo .mbPostContent p:first-child {
+		margin-top: 0px;
+	}
+	
+	#myBlog-wrap .embed,
+	#myBlog-wrap object,
+	#myBlog-wrap embed {
+		display: block;
+		margin: 0px;
+		width: 100%;
+	}
+	
+	#myBlog-wrap .mbPostComment {
+		float: right;
+	}
+	
+	#myBlog-wrap .mbPostReadMore {
+		margin-top: 15px;
+		text-align: right;
+	}
+
+
+#myBlog-wrap .mbPostMeta {
+	border-top: 1px solid #e2e0e1;
+	padding: 20px 15px 15px;
+	position: relative;
+	z-index: 0;
+}
+
+#myBlog-wrap .mbEntryMeta .mbPostMetaContent {
+	margin-right: 190px;
+	min-height: 60px !important;
+}
+
+#myBlog-wrap .mbEntryMeta .mbSocialIcons {
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	}
+	#myBlog-wrap .mbEntryMeta .mbSocialIcons .mbSocialElements {
+		float: right;
+		margin-left: 6px;
+	}
+	
+
+#myBlog-wrap .mbPostMeta .mbTagsContent {
+	overflow: hidden;
+	margin: 4px 0;
+}
+
+#myBlog-wrap .mbPostMeta .mbTagsContent a {
+	display: block;
+	float: left;
+	border-radius: 4px;
+	background: #ddd;
+	padding: 4px 8px;
+	margin: 2px;
+	text-decoration: none;
+	color: #555;
+	text-shadow: 1px 1px 0px #eee;
+	font-size: 11px;
+}
+
+#myBlog-wrap .mbPostMetaContent a {
+	text-shadow: 1px 1px 0px #fff;
+}
+
+#myBlog-wrap .mbPostMeta .userAvatar {
+	position: absolute;
+	top: 20px;
+	left: 15px;
+}
+
+#myBlog-wrap .mbPostMeta .userAvatar img {
+	display: block;
+}
+
+#myBlog-wrap .my-pagenav {
+	text-align: center;
+}
+
+#myBlog-wrap .my-pagenav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 25px auto 0;
+	text-align: center;
+	border: 1px solid #e2e0e1;
+	background: #fbfbfb url(../images/erica-tb-bg.png) repeat-x 0 100%;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+	display: inline-block;
+	border-radius: 4px;
+	overflow: hidden;
+	zoom: 1;
+	*display:inline;
+}
+
+#myBlog-wrap .my-pagenav ul li {
+	display: inline-block;
+	zoom: 1;
+	*display:inline;
+}
+
+#myBlog-wrap .my-pagenav ul li + li {
+	border-left: 1px solid #e2e0e1;
+}
+
+#myBlog-wrap .my-pagenav .pagenav {
+	display: block;
+	padding: 6px 12px;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+
+#myBlog-wrap .my-pagenav ul li:first-child .pagenav {
+	border-left: 0px none;
+}
+#myBlog-wrap .my-pagenav span.pagenav {
+	background: #333;
+	color: #fff;
+	border-top: 1px solid #333;
+	border-left: 1px solid #333;
+}
+
+#myBlog-wrap .my-pagenav li.pagination-start span.pagenav,
+#myBlog-wrap .my-pagenav li.pagination-prev span.pagenav,
+#myBlog-wrap .my-pagenav li.pagination-next span.pagenav,
+#myBlog-wrap .my-pagenav li.pagination-end span.pagenav {
+	background: transparent;
+	color: #333;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+
+#myBlog-wrap .mbBigComment {
+	padding: 15px;
+	background: #ddd;
+	box-shadow: 0px -1px 0px #e2e0e1;
+	border-top: 1px solid #fff;
+}
+
+
+#myBlog-wrap #mbSearchForm ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	}
+	#myBlog-wrap #mbSearchForm ul li {
+		overflow: hidden;
+	}
+	#myBlog-wrap #mbSearchForm ul li + li {
+		margin-top: 15px;
+	}
+	#myBlog-wrap #mbSearchForm ul label {
+		display: block;
+		width: 20%;
+		text-align: right;
+		float: left;
+		line-height: 26px;
+	}
+	#myBlog-wrap #mbSearchForm ul input[type=text] {
+		width: 50%;
+		float: left;
+		margin-left: 20px;
+		border-radius: 3px;
+		border: 1px solid #ccc;
+		display: block;
+		padding: 4px;
+	}
+	#myBlog-wrap #mbSearchForm input[type=submit] {
+		margin: 15px auto 0;
+		display: block;
+	}
+	#myBlog-wrap h4,
+	#myBlog-wrap h4 a {
+		text-shadow: 0 0 0 transparent;
+		padding: 0;
+		margin: 0;
+		line-height: 1.3;
+	}
+	
+	#myBlog-wrap #mbSearchResults ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	#myBlog-wrap #mbSearchResults ul li + li {
+		margin-top: 15px;
+		padding-top: 15px;
+		border-top: 1px solid #ccc;
+	}
+	#myBlog-wrap #mbSearchResults .mbSearchMeta,
+	#myBlog-wrap #mbSearchResults .mbSearchMeta a {
+		font-size: 10px;
+		text-transform: uppercase;
+		color: #666;
+		text-shadow: 1px 1px 0 #fff;
+		line-height: 1;
+		margin: 0;
+	}
+	
+	#myBlog-wrap #mbSearchResults .mbSearchMeta {
+		padding: 4px 8px;
+		background: #fbfbfb;
+		margin-top: 8px;
+	}
+	
+	#myBlog-wrap #mbSearchResults .mbSearchText {
+		margin-top: 8px;
+	}
+
+	/* Tags
+	 * =================================================================================================
+	 */
+
+	#mbCatTagWrap {
+		padding:0 10px 30px;
+	}
+
+	#mbCatTagWrap .mbTags {
+		display: block;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		background: #eee;
+		float: left;
+		padding: 6px 10px;
+		text-decoration: none;
+		border: 1px solid #f9f9f9;
+		box-shadow: 0px 1px 2px #dfdfdf;
+		margin-bottom: 8px;
+	}
+	#mbCatTagWrap .mbTags + .mbTags {
+		margin-left: 8px;
+	}
+
+	#myBlog-wrap .mbNavi a {
+		text-transform: capitalize;
+	}
+
+	#myBlog-wrap .mbCommonWrap {
+		margin: 20px 0;
+	}

@@ -1,0 +1,76 @@
+<?php
+$e = $entry;
+?>
+
+<!-- Start ERICA Single post wrap -->
+
+<div class="mbPost<?php if ($e['is_quickpost']) echo ' mbqp-'.$e['quickpost_type']; ?>" id="post-<?php echo $e['id']; ?>">
+	
+	<?php if ( $e['title'] && $e['quickpost_type'] != 'quote'  && $e['quickpost_type'] != 'photo' && $e['quickpost_type'] != 'video' ) { ?>		
+		<div class="mbPostTitle">
+			<h3 class="mbHeader"><a href="<?php echo $e['permalink']; ?>"><?php echo $e['title']; ?></a></h3>
+		</div>
+	<?php } ?>
+	
+	
+	<div class="mbPostContent">
+		<?php echo $e['text']; ?>
+		
+		<?php if ( $e['quickpost_type'] == 'quote' ) { ?>
+			<div class="mbqp-quote-author">&#8212; <?php echo $e['title']; ?></div>
+		<?php } ?>
+		
+		<div class="mbPostTip" style="left: <?php echo ($avatar_w/2) + 5; ?>px;">&nbsp;</div>
+		
+	</div>
+	
+	<div class="mbPostMeta mbEntryMeta">
+		
+		<?php if(!empty($e['avatar'])) { ?>
+			<div class="userAvatar">
+				<?php echo $e['avatar']; ?>
+			</div>
+			<div class="mbPostMetaContent" style="margin-left: <?php echo $avatar_w + 15; ?>px; min-height: <?php echo $avatar_h; ?>px">
+		<?php	} else { ?>
+			<div class="mbPostMetaContent mbNoAvatar" style="min-height: <?php echo $avatar_h; ?>px">
+		<?php } ?>
+				<a href="<?php echo $e['authorLink']; ?>" title="<?php echo JText::_('COM_MY_VIEW_ALL_POSTS_BY');?>" class="author-link"><?php echo $e['author']; ?></a>
+				<?php echo JText::sprintf('COM_MY_POSTED_ON', $e['createdFormatted']); ?>
+				<?php if( $categoryDisplay ) echo JText::sprintf('COM_MY_POSTED_IN' , $e['jcategory'] ); ?>
+				<?php if (myGetTags($e['id'])) { ?>
+					<div class="mbTagsContent">
+						<div class="mbTagsIcon">&nbsp;</div>
+						<?php echo str_replace(',','',$e['categories']); ?>
+						<div class="clear"></div>
+					</div>
+				<?php } ?>
+				<?php
+					if($entry['created_by'] == $userId)
+					{
+						echo ' &middot; '.$e['editLink'];
+					}
+				?>
+			</div>
+			
+			<div class="mbSocialIcons">
+				<div class="mbSocialElements"><?php echo $fbShare?myFbShare($e['permalink']).'':'' ?></div>
+				<div class="mbSocialElements"><?php echo $googleShare?myGooglePlusShare($e['permalink']).'':''?></div>
+				<div class="mbSocialElements"><?php echo $twitterShare?myTweetShare($e['permalink']):''?></div>
+			</div>
+
+		<div class="clear"></div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<!-- Start: Comment Count -->
+	<?php if (isset($e['comments']) && $e['comments']!="") { ?>
+		<div class="mbBigComment">
+			<a href="<?php echo $e['permalink']; ?>#comments" class="postSummary-comments"><?php echo $e['comments']; ?></a>
+		</div>
+	<?php } ?>
+	<!-- End: Comment Count -->
+	
+</div>
+
+<!-- End ERICA Single post wrap -->
