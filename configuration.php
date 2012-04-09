@@ -11,9 +11,9 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
-	public $user = 'sp7';
+	public $user = 'sp7_git';
 	public $password = 'L0gM3!n!12';
-	public $db = 'sp7_joomla';
+	public $db = 'sp7_git';
 	public $dbprefix = 'sp7_';
 	public $live_site = '';
 	public $secret = 'g8FFP9xjEOQk3cdr';

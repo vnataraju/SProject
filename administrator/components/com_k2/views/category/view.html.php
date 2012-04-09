@@ -110,7 +110,7 @@ class K2ViewCategory extends JView
 		}
 		$this->assignRef('aceAclFlag', $aceAclFlag);
 	
-		parent::display();
+		parent::display($tpl);
 	}
 
 }
